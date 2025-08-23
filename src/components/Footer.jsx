@@ -11,7 +11,7 @@ export default function Footer() {
         py: 4,
         px: { xs: 2, sm: 4, md: 8 },
         mt: 8,
-        width: "100vw", // benar-benar full width
+        width: "100vw", 
         position: "relative",
         left: "50%",
         right: "50%",
@@ -55,6 +55,10 @@ export default function Footer() {
           <Typography variant="body2">Jakarta Timur</Typography>
         </Grid>
       </Grid>
+      {/* Copyright */}
+      <Box sx={{ mt: 1, textAlign: "center", fontSize: 14, color: "#e0e0e0" }}>
+        &copy; {new Date().getFullYear()} PT Prambanan Lestari. All rights reserved.
+      </Box>
     </Box>
   );
 }

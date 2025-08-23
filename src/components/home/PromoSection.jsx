@@ -29,9 +29,9 @@ export default function PromoSection() {
               alt="Promo 1"
               className="w-full h-full object-cover"
             />
-            <button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition animate-bounce">
+            {/* <button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition animate-bounce">
               Chat Whatsapp
-            </button>
+            </button> */}
           </div>
 
           {/* Image 2 */}
@@ -41,9 +41,9 @@ export default function PromoSection() {
               alt="Promo 2"
               className="w-full h-full object-cover"
             />
-            <button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition animate-bounce">
+            {/* <button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition animate-bounce">
               Chat Whatsapp
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

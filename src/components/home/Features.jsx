@@ -82,7 +82,6 @@ export default function FeaturedProperties() {
           }}
           className="relative z-10"
         >
-          {/* Custom style untuk panah Swiper agar selalu terlihat dan oranye */}
           <style>{`
         .swiper-button-next, .swiper-button-prev {
           color: #f97316 !important; /* Tailwind orange-500 */

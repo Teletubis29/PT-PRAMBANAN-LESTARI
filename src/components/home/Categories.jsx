@@ -1,13 +1,13 @@
-import { FaBuilding, FaHome, FaDraftingCompass, FaTools, FaCity, FaCouch } from "react-icons/fa";
+import { FaBuilding, FaHome, FaDraftingCompass, FaTools, FaCity, FaCouch , FaWarehouse} from "react-icons/fa";
 
 const Categories = () => {
   const items = [
     { icon: <FaBuilding size={48} />, label: "Gedung" },
-    { icon: <FaCity size={48} />, label: "Apart / Ruko" },
+    { icon: <FaCity size={48} />, label: "Ruko" },
+    { icon: <FaWarehouse size={48} />, label: "Gudang" },
     { icon: <FaHome size={48} />, label: "Rumah" },
-    { icon: <FaDraftingCompass size={48} />, label: "Jasa Arsitek" },
-    { icon: <FaCouch size={48} />, label: "Jasa Design Interior" },
-    { icon: <FaTools size={48} />, label: "Jasa Konstruksi" },
+    { icon: <FaCouch size={48} />, label: "Jasa Interior" },
+    { icon: <FaTools size={48} />, label: "Jasa Arsitektur" },
   ];
 
   return (
