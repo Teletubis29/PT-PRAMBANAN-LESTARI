@@ -2,6 +2,7 @@ import React from 'react'
 import HeroGallery from '../components/Gallery/HeroGallery'
 import GallerySection from '../components/Gallery/GallerySection'
 import GalleryContent from '../components/Gallery/GalleryContent'
+import PortfolioSlider from '../components/Gallery/PortfolioSlider'
 
 const Gallery = () => {
   return (
@@ -9,6 +10,7 @@ const Gallery = () => {
       <HeroGallery/>
       <GallerySection/>
       <GalleryContent/>
+      <PortfolioSlider/>
     </div>
   )
 }

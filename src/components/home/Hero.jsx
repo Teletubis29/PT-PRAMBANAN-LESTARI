@@ -33,9 +33,33 @@ const Hero = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center px-4">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-snug max-w-3xl">
-          Selamat datang di website Prambanan Lestari
-        </h1>
+        {/* Animated Header Text */}
+        {(() => {
+          const [animate1, setAnimate1] = useState(false);
+          const [animate2, setAnimate2] = useState(false);
+          useEffect(() => {
+            const timer1 = setTimeout(() => setAnimate1(true), 100);
+            const timer2 = setTimeout(() => setAnimate2(true), 400);
+            return () => {
+              clearTimeout(timer1);
+              clearTimeout(timer2);
+            };
+          }, []);
+          return (
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-snug max-w-3xl flex flex-col items-center">
+              <span
+                className={`block transition-all duration-1000 ${animate1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-32'}`}
+              >
+                Selamat datang di website
+              </span>
+              <span
+                className={`block transition-all duration-1000 ${animate2 ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-32'}`}
+              >
+                Prambanan Lestari
+              </span>
+            </h1>
+          );
+        })()}
       </div>
 
       {/* Prev Button */}

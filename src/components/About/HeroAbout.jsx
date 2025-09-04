@@ -9,10 +9,10 @@ export default function HeroAbout() {
 	return (
 		<section
 			className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-start bg-cover bg-center"
-			style={{
-				backgroundImage:
-					'url("https://images.pexels.com/photos/981916/pexels-photo-981916.jpeg")',
-			}}
+					style={{
+						backgroundImage:
+							'url("/images/banners/header-about-01.jpg")',
+					}}
 		>
 			{/* Overlay putih transparan */}
 			<div className="absolute inset-0 bg-white bg-opacity-70" />
