@@ -3,7 +3,7 @@ import React from "react";
 export default function SolutionAbout() {
   return (
       <section className="bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch gap-0 mb-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch gap-0 mb-16">
           <div className="bg-gray-400 flex flex-col justify-center h-full w-full p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-6 leading-tight">
               Mungkin saat ini Anda<br />sedang mengalami hal berikut:

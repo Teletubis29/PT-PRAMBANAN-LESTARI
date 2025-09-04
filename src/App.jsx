@@ -3,23 +3,25 @@ import Layout from "./pages/Layout";
 import Home from "./pages/home";
 import About from "./pages/About";
 import Sale from "./pages/Sale";
+import Gallery from "./pages/Gallery";
 
 
 function App() {
   return (
     <Router>
       {/* Navigation */}
-      <nav style={{ padding: "10px", background: "#f5f5f5" }}>
+      {/* <nav style={{ padding: "10px", background: "#f5f5f5" }}>
         <Link to="/" style={{ margin: "0 10px" }}>
           Home
         </Link>
-        <Link to="/about" style={{ margin: "0 10px" }}>
+        <Link to="/tentang-kami" style={{ margin: "0 10px" }}>
           About
         </Link>
-         <Link to="/sale" style={{ margin: "0 10px" }}>
+         <Link to="/properti" style={{ margin: "0 10px" }}>
           Sale
         </Link>
-      </nav>
+  
+      </nav> */}
 
       {/* Routing */}
       <Routes>
@@ -32,7 +34,7 @@ function App() {
           }
         />
         <Route
-          path="/about"
+          path="/tentang-kami"
           element={
             <Layout>
               <About />
@@ -40,14 +42,23 @@ function App() {
           }
         />
          <Route
-          path="/sale"
+          path="/properti"
           element={
             <Layout>
               <Sale />
             </Layout>
           }
         />
+          <Route
+          path="/galeri"
+          element={
+            <Layout>
+              <Gallery />
+            </Layout>
+          }
+        />
       </Routes>
+      
     </Router>
   );
 }

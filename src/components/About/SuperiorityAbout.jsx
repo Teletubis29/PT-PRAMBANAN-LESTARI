@@ -66,22 +66,16 @@ const items = [
 
 export default function SuperiorityAbout() {
   return (
-    <section className="bg-gray-100 py-12 md:py-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[340px_1fr] gap-0 items-stretch">
-        {/* Kiri: Box abu-abu dengan judul besar */}
-        <div className="bg-gray-500 flex items-center justify-center rounded-l-2xl p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight text-center md:text-left">
-            Kami memiliki
-            <br />
-            keunggulan yang
-            <br />
-            berbeda dari
-            <br />
-            yang kamu ketahui
+    <section className=" py-5 md:pb-16">
+      <div className="max-w-6xl mx-auto flex flex-col gap-0 items-stretch">
+        {/* Judul di atas */}
+        <div className=" flex items-center justify-center 2xl p-1 md:p-2">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-700 leading-tight text-center">
+            Kami memiliki keunggulan yang berbeda
           </h2>
         </div>
-        {/* Kanan: Grid keunggulan */}
-        <div className="bg-white rounded-r-2xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+        {/* Grid keunggulan di bawah */}
+        <div className="bg-white rounded-b-2xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-5">
           {items.map((item, i) => (
             <div key={i} className="flex items-start gap-4">
               <div className="shrink-0 mt-1">{item.icon}</div>

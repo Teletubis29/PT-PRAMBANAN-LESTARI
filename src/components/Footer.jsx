@@ -10,7 +10,7 @@ export default function Footer() {
         color: "white",
         py: 4,
         px: { xs: 2, sm: 4, md: 8 },
-        mt: 8,
+        pt: 8,
         width: "100vw", 
         position: "relative",
         left: "50%",

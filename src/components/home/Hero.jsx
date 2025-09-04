@@ -6,9 +6,9 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
 
   const slides = [
-    "https://panangianschool.com/wp-content/uploads/2022/12/Mengapa-Tinggal-di-Apartemen-Semakin-Populer-1200px-x-675px-1200x675.jpg",
-    "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1536242017885-d46ddf800d1a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/images/banners/header1.jpg",
+    "/images/banners/header2.jpg",
+    "/images/banners/header3.jpg",
   ];
 
   useEffect(() => {

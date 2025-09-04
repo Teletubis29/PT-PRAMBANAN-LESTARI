@@ -23,25 +23,26 @@ export default function Navbar() {
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
             onClick={() => navigate("/")}
           >
-            Home
+            Beranda
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/about")}
+            onClick={() => navigate("/tentang-kami")}
           >
             Tentang Kami
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/sale")}
+            onClick={() => navigate("/properti")}
           >
             Properti
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
+            onClick={() => navigate("/galeri")}
           >
             Galleri
           </Button>

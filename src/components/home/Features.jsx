@@ -120,9 +120,6 @@ export default function FeaturedProperties() {
                     <button className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
                       View Properties
                     </button>
-                    <button className="flex-1 border border-orange-500 text-orange-500 py-2 rounded-lg hover:bg-orange-100 transition">
-                      Chat WhatsApp
-                    </button>
                   </div>
                 </div>
               </div>

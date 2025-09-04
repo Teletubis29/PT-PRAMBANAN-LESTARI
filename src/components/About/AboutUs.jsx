@@ -14,19 +14,17 @@ export default function AboutUs() {
             Kami adalah PT Prambanan Lestari
           </h3>
           <p className="text-gray-600 mb-2">
-            Prambanan Lestari adalah perusahaan jasa konstruksi, konsultan
-            arsitektur dan desain interior, yang berdiri dan mulai beroperasi di
-            Jakarta sejak tahun 1997. Perusahaan yang berpengalaman mengerjakan
-            berbagai proyek bangunan komersial hingga residensial seperti rumah
-            keluarga, juga berpengalaman mengerjakan interior,
+            Kami Direksi dan segenap Staff PT Prambanan Lestari senantiasa
+            berusaha semaksimal mungkin dalam menjalankan perusahaan agar dapat
+            memberikan pelayanan terbaik dan bertanggung jawab sesuai dengan
+            harapan Anda.
           </p>
           <p className="text-gray-600 mb-6">
-            restorasi dan Prambanan Lestari adalah perusahaan jasa konstruksi,
-            konsultan arsitektur dan desain interior, yang berdiri dan mulai
-            beroperasi di Jakarta sejak tahun 1997. Perusahaan yang
-            berpengalaman mengerjakan berbagai proyek bangunan komersial hingga
-            residensial seperti rumah keluarga, juga berpengalaman mengerjakan
-            interior, restorasi dan
+            Didukung oleh tenaga ahli berpengalaman dan profesional dibidangnya
+            dalam mengerjakan proyek-proyek secara detail dan komprehensif, kami
+            siap memberi konsultasi dan membantu mewujudkan ide atau gagasan
+            sesuai keinginan konsumen, dari proyek rumah tinggal, ruko,
+            perkantoran, interior dan banyak lagi proyek yang telah dikerjakan.
           </p>
           {/* Statistik */}
           <div className="flex gap-4 mt-6">
