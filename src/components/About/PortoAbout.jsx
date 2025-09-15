@@ -6,7 +6,7 @@ const PortoAbout = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-0 min-h-[60vh]">
         {/* Kiri: Konten */}
         <div className="flex flex-col justify-center h-full">
-          <h1 className="text-6xl font-bold mb-4 leading-none text-gray-700">PORFOLIO</h1>
+          <h1 className="text-6xl font-bold mb-4 leading-none text-gray-700">PORTOFOLIO</h1>
           <h2 className="text-2xl font-bold mb-4 leading-tight text-gray-700">
             Kami memiliki prioritas untuk dapat menciptakan kepercayaan anda
           </h2>

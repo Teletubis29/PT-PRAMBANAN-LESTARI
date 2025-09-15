@@ -14,17 +14,24 @@ export default function AboutUs() {
             Kami adalah PT Prambanan Lestari
           </h3>
           <p className="text-gray-600 mb-2">
-            Kami Direksi dan segenap Staff PT Prambanan Lestari senantiasa
-            berusaha semaksimal mungkin dalam menjalankan perusahaan agar dapat
-            memberikan pelayanan terbaik dan bertanggung jawab sesuai dengan
-            harapan Anda.
+            Prambanan Lestari adalah perusahaan jasa konstruksi, arsitektur dan
+            interior, yang berdiri dan beroperasi di Jakarta sejak tahun 2001.
+            Perusahaan yang berpengalaman mengerjakan berbagai proyek bangunan
+            komersial hingga residensial seperti rumah keluarga, dan mengerjakan
+            interior. Selalu update mengikuti perkembangan jaman dengan harga &
+            material yang modern serta berkualitas.
           </p>
           <p className="text-gray-600 mb-6">
-            Didukung oleh tenaga ahli berpengalaman dan profesional dibidangnya
-            dalam mengerjakan proyek-proyek secara detail dan komprehensif, kami
-            siap memberi konsultasi dan membantu mewujudkan ide atau gagasan
-            sesuai keinginan konsumen, dari proyek rumah tinggal, ruko,
-            perkantoran, interior dan banyak lagi proyek yang telah dikerjakan.
+            Profesional dalam mengerjakan Project berdasarkan konstruksi yang
+            handal. Kami selalu berusaha untuk memahami dalam mewujudkan
+            keinginan klien. Hal ini guna memberikan hasil kepuasan. Dengan
+            lingkup pekerjaan meliputi perencanaan, pengawasan dan pelaksanaan
+            dalam bidang arsitektur, struktur dan landscape. Prambanan Lestari
+            memiliki teamwork yang solid dan berpengalaman dalam perencanaan dan
+            pelaksanaan proyek, sehingga Anda akan mendapatkan hasil terbaik
+            dengan harga yang wajar. Kami percaya bahwa agar efektif, ruang
+            kerja harus mencerminkan nilai-nilai estetika baik eksterior maupun
+            interior.
           </p>
           {/* Statistik */}
           <div className="flex gap-4 mt-6">

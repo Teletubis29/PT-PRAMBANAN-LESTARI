@@ -1,14 +1,14 @@
 import { FaBuilding, FaHome, FaDraftingCompass, FaTools, FaCity, FaCouch , FaWarehouse} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Categories = () => {
   const items = [
-    { icon: <FaBuilding size={48} />, label: "Gedung" },
-    { icon: <FaCity size={48} />, label: "Ruko" },
-    { icon: <FaWarehouse size={48} />, label: "Gudang" },
-    { icon: <FaHome size={48} />, label: "Rumah" },
-    { icon: <FaCouch size={48} />, label: "Jasa Interior" },
+    { icon: <FaBuilding size={48} />, label: "Penjualan Properti" },
     { icon: <FaTools size={48} />, label: "Jasa Arsitektur" },
+    { icon: <FaCouch size={48} />, label: "Jasa Interior" },
+    { icon: <FaDraftingCompass size={48} />, label: "Our Experience" },
   ];
+  const navigate = useNavigate();
 
   return (
     <section className="py-20 bg-gray-100 text-center">
@@ -23,6 +23,13 @@ const Categories = () => {
           <div
             key={idx}
             className="flex flex-col items-center group cursor-pointer"
+            onClick={() => {
+              if (item.label === "Jasa Arsitektur") {
+                navigate("/jasa-arsitektur");
+              } else if (item.label === "Jasa Interior") {
+                navigate("/jasa-interior");
+              }
+            }}
           >
             {/* Circle Icon */}
             <div className="w-28 h-28 flex items-center justify-center rounded-full bg-white shadow-lg group-hover:bg-orange-500 transition duration-300">

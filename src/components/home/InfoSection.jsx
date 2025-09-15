@@ -7,11 +7,11 @@ export default function InfoSection() {
 				{/* Kiri: Teks */}
 				<div className="flex-1 text-white">
 					<h2 className="text-2xl md:text-3xl font-bold mb-4">Anda harus tahu tentang kami</h2>
-					<ul className="space-y-1 mb-4 text-base md:text-lg text-gray-100">
+					<ul className="space-y-2 mb-4 text-base md:text-lg text-gray-100">
 						<li>Kami telah mengelola lebih dari 100 properti di berbagai lokasi strategis.</li>
-						<li>50 pelanggan telah melakukan pembelian dan puas dengan layanan kami.</li>
-						<li>40 mitra telah mempercayakan proyek mereka kepada kami.</li>
-						<li>Kami terus berkembang, membangun jaringan, dan menyediakan properti bernilai tinggi.</li>
+						<li>+50 pelanggan telah melakukan pembelian dan puas dengan layanan kami.</li>
+						<li>+50 mitra telah mempercayakan proyek mereka kepada kami.</li>
+						<li>Kami terus berkembang, membangun mitra property, dan menyediakan properti bernilai tinggi</li>
 					</ul>
 					<p className="italic text-gray-200 text-sm md:text-base">Saatnya Anda bergabung dengan kami dan menjadi bagian dari kesuksesan ini!</p>
 				</div>

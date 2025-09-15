@@ -68,7 +68,7 @@ export default function FeaturedProperties() {
     <section className="py-16 bg-gray-300">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-center text-2xl md:text-4xl font-bold tracking-widest uppercase mb-10 text-orange-500">
-          Featured Properties
+          Market Properties
         </h2>
 
         <Swiper

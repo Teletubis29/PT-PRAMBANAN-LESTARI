@@ -8,16 +8,12 @@ const About = () => {
             <span className="text-gray-500">PT Prambanan Lestari</span>
           </h2>
           <p className="text-lg md:text-2xl text-gray-600 leading-relaxed mb-6">
-            Prambanan Lestari adalah perusahaan jasa konstruksi, konsultan
-            arsitektur dan desain interior, yang berdiri dan mulai beroprasi di
-            Jakarta sejak tahun 1997. Perusahaan yang berpengalaman mengerjakan
-            berbagai proyek bangunan komersial hingga residensial seperti rumah
-            keluarga, juga berpengalaman mengerjakan interior, restorasi dan
-            renovasi bangunan. Dengan lingkup pekerjaan meliputi perencanaan,
-            pengawasan dan pelaksanaan dalam bidang arsitektur, struktur dan
-            lanscape, Prambanan Lestari memiliki teamwork yang solid dan
-            berpengalaman dalam perencanaan dan pelaksanaan proyek, sehingga
-            Anda akan mendapatkan hasil terbaik dengan harga yang wajar. . . 
+            Prambanan Lestari adalah perusahaan jasa konstruksi, arsitektur dan
+            interior, yang berdiri dan beroperasi di Jakarta sejak tahun 2001.
+            Perusahaan yang berpengalaman mengerjakan berbagai proyek bangunan
+            komersial hingga residensial seperti rumah keluarga, dan mengerjakan
+            interior. Selalu update mengikuti perkembangan jaman dengan harga &
+            material yang modern serta berkualitas . . . 
           </p>
           <button className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition ml-auto block">
             Read More

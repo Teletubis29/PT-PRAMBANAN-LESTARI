@@ -1,10 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Layout from "./pages/Layout";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Sale from "./pages/Sale";
 import Gallery from "./pages/Gallery";
-
+import Contact from "./pages/Contact";
+import Pembayaran from "./pages/Pembayaran";
+import PackageArchitect from "./components/Pembayaran/PackageArchitect";
+import PackageInterior from "./components/Pembayaran/PackageInterior";
+import PackageConstruction from "./components/Pembayaran/PackageConstruction";
 
 function App() {
   return (
@@ -41,7 +45,7 @@ function App() {
             </Layout>
           }
         />
-         <Route
+        <Route
           path="/properti"
           element={
             <Layout>
@@ -49,7 +53,39 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/pembayaran"
+          element={
+            <Layout>
+              <Pembayaran />
+            </Layout>
+          }
+        />
+        <Route
+          path="/pembayaran/jasa-arsitektur"
+          element={
+            <Layout>
+              <PackageArchitect />
+            </Layout>
+          }
+        />
           <Route
+          path="/pembayaran/jasa-interior"
+          element={
+            <Layout>
+              <PackageInterior />
+            </Layout>
+          }
+        />
+             <Route
+          path="/pembayaran/jasa-konstruksi"
+          element={
+            <Layout>
+              <PackageConstruction />
+            </Layout>
+          }
+        />
+        <Route
           path="/galeri"
           element={
             <Layout>
@@ -57,8 +93,15 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/kontak"
+          element={
+            <Layout>
+              <Contact />
+            </Layout>
+          }
+        />
       </Routes>
-      
     </Router>
   );
 }

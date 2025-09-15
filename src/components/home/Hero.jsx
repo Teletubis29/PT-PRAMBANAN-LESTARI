@@ -6,6 +6,7 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
 
   const slides = [
+    "/images/banners/header.jpg",
     "/images/banners/header1.jpg",
     "/images/banners/header2.jpg",
     "/images/banners/header3.jpg",

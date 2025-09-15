@@ -42,6 +42,13 @@ export default function Navbar() {
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
+            onClick={() => navigate("/pembayaran")}
+          >
+            Pembayaran
+          </Button>
+          <Button
+            color="inherit"
+            sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
             onClick={() => navigate("/galeri")}
           >
             Galleri
@@ -49,6 +56,7 @@ export default function Navbar() {
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
+            onClick={() => navigate("/kontak")}
           >
             Kontak
           </Button>

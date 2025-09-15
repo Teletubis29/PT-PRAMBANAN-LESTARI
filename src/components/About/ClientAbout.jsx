@@ -6,7 +6,7 @@ const ClientAbout = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-0">
         {/* Kiri: Judul dan deskripsi */}
         <div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">Klient Kami</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-2">Klien Kami</h1>
           <h2 className="text-2xl md:text-2xl font-bold text-gray-800 mb-4">Maybe you need to know some of our clients!</h2>
           <p className="text-sm italic text-gray-700 mb-1 max-w-md">
             We have been trusted to handle various prestigious projects, from the construction of sturdy and representative office buildings, apartments with modern and functional designs, hotels prioritizing comfort and luxury, to commercial spaces designed to support business productivity. Furthermore, we provide a variety of other supporting services tailored to our clients' needs. We execute each project with high commitment, detailed planning, and professional supervision to ensure optimal and timely results.
