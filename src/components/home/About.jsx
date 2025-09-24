@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const About = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-20 border-t border-b border-gray-400 px-6 md:px-16 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -15,7 +18,10 @@ const About = () => {
             interior. Selalu update mengikuti perkembangan jaman dengan harga &
             material yang modern serta berkualitas . . . 
           </p>
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition ml-auto block">
+          <button
+            className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition ml-auto block"
+            onClick={() => navigate("/tentang-kami#aboutus")}
+          >
             Read More
           </button>
         </div>
@@ -23,9 +29,9 @@ const About = () => {
         {/* Right: Image */}
         <div className="flex-1">
           <img
-            src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="/images/gbr/kolase-gbr.jpg" 
             alt="About PT Prambanan Lestari"
-            className="rounded-2xl shadow-lg w-full object-cover"
+            className="rounded-md shadow-lg w-full object-cover"
           />
         </div>
       </div>

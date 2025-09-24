@@ -1,4 +1,4 @@
-import Hero from "../components/Home/Hero";
+import Hero from "../components/home/Hero";
 import Categories from "../components/home/Categories";
 import About from "../components/home/About"; // Assuming you have an About component
 import Features from "../components/home/Features"; // Assuming you have a Features component

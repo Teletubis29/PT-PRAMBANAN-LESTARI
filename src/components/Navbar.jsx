@@ -21,42 +21,42 @@ export default function Navbar() {
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/")}
+            onClick={() => { navigate("/"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Beranda
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/tentang-kami")}
+            onClick={() => { navigate("/tentang-kami"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Tentang Kami
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/properti")}
+            onClick={() => { navigate("/properti"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Properti
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/pembayaran")}
+            onClick={() => { navigate("/pembayaran"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Pembayaran
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/galeri")}
+            onClick={() => { navigate("/galeri"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Galleri
           </Button>
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
-            onClick={() => navigate("/kontak")}
+            onClick={() => { navigate("/kontak"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Kontak
           </Button>

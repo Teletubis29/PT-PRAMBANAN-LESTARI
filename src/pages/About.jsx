@@ -4,7 +4,7 @@ import HeroAbout from "../components/About/HeroAbout";
 import PortoAbout from "../components/About/PortoAbout";
 import SolutionAbout from "../components/About/SolutionAbout";
 import SuperiorityAbout from "../components/About/superiorityAbout";
-import TrustAbout from "../components/About/trustAbout";
+import TrustAbout from "../components/About/TrustAbout";
 
 
 export default function About() {

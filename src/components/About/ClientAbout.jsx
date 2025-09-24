@@ -14,9 +14,13 @@ const ClientAbout = () => {
         </div>
         {/* Kanan: Grid logo klien (sementara 1 div gambar) */}
         <div className="flex justify-center items-center">
-          <div className="w-full max-w-2xl h-64 bg-white rounded-lg shadow flex items-center justify-center border border-gray-200">
-            <span className="text-gray-400 text-xl">[Gambar Logo Klien Placeholder]</span>
-          </div>
+          {/* <div className="w-full max-w-2xl h-64 rounded-lg shadow flex items-center justify-center border border-gray-200 overflow-hidden"> */}
+            <img
+              src="/images/client/partner.jpg"
+              alt="Logo Klien Partner"
+              className="object-cover w-[93%] h-full"
+            />
+          {/* </div> */}
         </div>
       </div>
     </section>

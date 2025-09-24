@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-export default function AboutUs() {
+const AboutUs = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section id="aboutus" className="py-12 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-8">
         {/* Kiri: Teks dan statistik */}
         <div>
@@ -60,4 +72,6 @@ export default function AboutUs() {
       </div>
     </section>
   );
-}
+};
+
+export default AboutUs;
