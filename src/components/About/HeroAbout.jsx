@@ -11,11 +11,11 @@ export default function HeroAbout() {
 			className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-start bg-cover bg-center"
 					style={{
 						backgroundImage:
-							'url("/images/banners/header-about-01.jpg")',
+							'url("/images/banners/header-tentang-kami.jpg")',
 					}}
 		>
 			{/* Overlay putih transparan */}
-			<div className="absolute inset-0 bg-white bg-opacity-70" />
+			<div className="absolute inset-0 bg-white bg-opacity-40" />
 			{/* Konten */}
 					<div className="relative z-10 max-w-2xl ml-8 md:ml-16 p-6 rounded-lg">
 						<h1

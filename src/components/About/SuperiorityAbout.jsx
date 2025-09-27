@@ -14,23 +14,13 @@ import { MdOutlineDesignServices } from "react-icons/md";
 const items = [
   {
     icon: <FaUserTie size={28} className="text-gray-500" />,
-    title: "Profesional",
-    desc: "Setiap proyek dikerjakan oleh tim yang kompeten dengan standar kerja yang ketat dan menjunjung tinggi nilai-nilai profesional.",
-  },
-  {
-    icon: <FaClock size={28} className="text-gray-500" />,
-    title: "Tepat waktu",
-    desc: "Ketepatan waktu adalah bagian dari komitmen kami. Kami melaksanakan setiap proyek dengan perencanaan yang matang dan eksekusi yang presisi, memastikan hasil terbaik tercapai tepat waktu.",
+    title: "Pengalaman Tim",
+    desc: "Didukung oleh tenaga profesional di bidang Arsitek dan Interior design, karena sudah lebih dari 20 tahun pengalaman (sejak 2001) kami telah membuktikan hasil karya yang telah di rancang dengan desain unik, model kekinian dan mampu bersaing.",
   },
   {
     icon: <FaCubes size={28} className="text-gray-500" />,
     title: "Kualitas",
-    desc: "Kami memberikan kualitas di setiap bangunan yang kami jalankan, dengan proses pengerjaan yang didukung oleh tenaga ahli yang berpengalaman di bidang kontruksi.",
-  },
-  {
-    icon: <FaBullhorn size={28} className="text-gray-500" />,
-    title: "Pemasaran",
-    desc: "Kami tidak hanya memasarkan, kami membangun kepercayaan dengan diangkat oleh tim pemasaran yang profesional, kami siap memberikan solusi, mulai dari properti hingga layanan untuk mewujudkan visi Anda.",
+    desc: "Kami memberikan kulitas disetiap bangunan yang kami jalankan, dengan proses pengerjaan yang didukung oleh tenaga ahli yang berpengalaman dibidang kontruksi.",
   },
   {
     icon: <FaHandshake size={28} className="text-gray-500" />,
@@ -38,28 +28,28 @@ const items = [
     desc: "Kepercayaan dalam Kerjasama yang dibangun atas komitmen adalah menjadi prioritas kami untuk setiap project, kami siap menjadi rekan mitra untuk kesuksesan Bersama.",
   },
   {
-    icon: <FaCubes size={28} className="text-gray-500" />,
-    title: "One stop solusi",
+    icon: <FaMoneyBillWave size={28} className="text-gray-500" />,
+    title: "Harga Terjangkau",
+    desc: "Kami menawarkan Gedung, Rumah dan jasa layanan berkualitas dengan harga terjangkau, disetiap project yang dibangun. kepercayaan anda adlah prioritas Utama kami.",
+  },
+  {
+    icon: <FaClock size={28} className="text-gray-500" />,
+    title: "Pekerjaan Profesional dan Tepat Waktu",
+    desc: "Kami sepenuhnya memahi bahwa kepercayaan Klien adalah Aset berharga yang tidak dapat diukuri. Oleh karena itu kami mengutamakan pengerjaan waktu Ketepatan waktu adalah bagian dari komitmen kami. Kami melaksanakan setiap proyek dengan perencanaan yang matang dan eksekusi yang presisi, memastikan hasil terbaik tercapai tepat waktu.",
+  },
+  {
+    icon: <FaBullhorn size={28} className="text-gray-500" />,
+    title: "Pemasaran",
+    desc: "Kami tidak hanya memasarkan, kami membangun kepercayaan dengan ditangani oleh tim pemasaran yang profesional, kami siap memberikan solusi, mulai dari properti hingga layanan untuk mewujudkan visi Anda.",
+  },
+  {
+    icon: <FaDraftingCompass size={28} className="text-gray-500" />,
+    title: "One Stop Solution",
     desc: "Dari perencanaan hingga pembangunan, semua kebutuhan Anda ada di satu tempat. PT Prambanan Lestari hadir sebagai One Stop Solution untuk mewujudkan proyek berkualitas dengan harga.",
   },
   {
-    icon: <FaMoneyBillWave size={28} className="text-gray-500" />,
-    title: "Harga terjangkau",
-    desc: "Kami menawarkan Gedung, Rumah dan jasa layanan berkualitas dengan harga terjangkau, di setiap project yang didukung, kepercayaan anda adalah prioritas Utama kami.",
-  },
-  {
-    icon: <MdOutlineDesignServices size={28} className="text-gray-500" />,
-    title: "Tim Arsitektur & Design Interior",
-    desc: "Didukung oleh tenaga profesional di bidang arsitektur & interior design berpengalaman di bidangnya lebih dari 10 tahun, setiap perencanaan kami berikan secara detail dan lengkap.",
-  },
-  {
-    icon: <FaCertificate size={28} className="text-gray-500" />,
-    title: "Sertifikat",
-    desc: "Kami selalu berkomitmen untuk menyediakan sertifikat yang memenuhi persyaratan keaslian pemerintah dan juga PPATK.",
-  },
-  {
     icon: <FaPhoneAlt size={28} className="text-gray-500" />,
-    title: "Layanan 24 jam",
+    title: "Layanan 24 Jam",
     desc: "Dengan layanan 24/7, kami mengutamakan menjaga kepercayaan dan kerjasama, karena kepuasan pelanggan adalah prioritas kami.",
   },
 ];

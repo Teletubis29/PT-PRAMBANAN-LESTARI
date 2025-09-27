@@ -16,14 +16,14 @@ const About = () => {
             Perusahaan yang berpengalaman mengerjakan berbagai proyek bangunan
             komersial hingga residensial seperti rumah keluarga, dan mengerjakan
             interior. Selalu update mengikuti perkembangan jaman dengan harga &
-            material yang modern serta berkualitas . . . 
+            material yang modern serta berkualitas.
           </p>
-          <button
+          {/* <button
             className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition ml-auto block"
             onClick={() => navigate("/tentang-kami#aboutus")}
           >
             Read More
-          </button>
+          </button> */}
         </div>
 
         {/* Right: Image */}

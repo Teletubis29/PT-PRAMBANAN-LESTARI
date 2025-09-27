@@ -1,68 +1,27 @@
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { FaToilet, FaWater, FaBolt, FaBuilding } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
-import { MdOutlineLayers } from "react-icons/md";
+import * as FaIcons from "react-icons/fa";
+import * as MdIcons from "react-icons/md";
+import productsData from "../../data/productsData";
 
 export default function FeaturedProperties() {
-  const properties = [
-    {
-      id: 1,
-      title: "Building",
-      address: "Jl. Tanah Koja no. 17 dan sebagainya",
-      image:
-        "https://plus.unsplash.com/premium_photo-1676467492300-344de29e3161?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      facilities: [
-        { icon: <FaHome size={20} />, label: "Lift" },
-        { icon: <FaToilet size={20} />, label: "Toilet" },
-        { icon: <FaWater size={20} />, label: "Water" },
-        { icon: <FaBolt size={20} />, label: "Listrik" },
-        { icon: <MdOutlineLayers size={20} />, label: "Lantai keramik" },
-        { icon: <FaBuilding size={20} />, label: "Ciling tinggi" },
-      ],
-    },
-    {
-      id: 2,
-      title: "Apartemen",
-      address: "Jl. Sudirman no. 25, Surabaya",
-      image:
-        "https://plus.unsplash.com/premium_photo-1676467492300-344de29e3161?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      facilities: [
-        { icon: <FaHome size={20} />, label: "Lift" },
-        { icon: <FaToilet size={20} />, label: "Toilet" },
-        { icon: <FaWater size={20} />, label: "Water" },
-        { icon: <FaBolt size={20} />, label: "Listrik" },
-      ],
-    },
-    {
-      id: 3,
-      title: "Rumah",
-      address: "Jl. Setiabudi no. 10, Bandung",
-      image:
-        "https://plus.unsplash.com/premium_photo-1676467492300-344de29e3161?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      facilities: [
-        { icon: <FaToilet size={20} />, label: "Toilet" },
-        { icon: <FaWater size={20} />, label: "Water" },
-        { icon: <FaBolt size={20} />, label: "Listrik" },
-      ],
-    },
-    {
-      id: 4,
-      title: "Apartemen",
-      address: "Jl. Setiabudi no. 10, Jakarta",
-      image:
-        "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?_gl=1*1pk0d47*_ga*MTc2NTU0NDU4LjE3MzAzMDY3MjA.*_ga_8JE65Q40S6*czE3NTU3NzkwMjAkbzQkZzEkdDE3NTU3NzkwMjMkajU3JGwwJGgw",
-      facilities: [
-        { icon: <FaToilet size={20} />, label: "Toilet" },
-        { icon: <FaWater size={20} />, label: "Water" },
-        { icon: <FaBolt size={20} />, label: "Listrik" },
-        { icon: <MdOutlineLayers size={20} />, label: "Lantai keramik" },
-        { icon: <FaBuilding size={20} />, label: "Ciling tinggi" },
-      ],
-    },
-  ];
+  // Ambil semua property dari productsData
+  const properties = productsData;
+  // Helper untuk render icon dari string
+  const getIconComponent = (iconName) => {
+    if (iconName.startsWith("Fa")) {
+      const Icon = FaIcons[iconName];
+      return Icon ? <Icon size={20} /> : null;
+    }
+    if (iconName.startsWith("Md")) {
+      const Icon = MdIcons[iconName];
+      return Icon ? <Icon size={20} /> : null;
+    }
+    return null;
+  };
 
   return (
     <section className="py-16 bg-gray-300">
@@ -90,26 +49,26 @@ export default function FeaturedProperties() {
       `}</style>
           {properties.map((property) => (
             <SwiperSlide key={property.id} className="h-full">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col min-h-[540px]">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col min-h-[540px] max-h-[600px] justify-between">
                 <img
                   src={property.image}
                   alt={property.title}
-                  className="w-full h-72 object-contain bg-white"
+                  className="w-full h-72 max-h-60 object-contain bg-white"
                 />
-                <div className="p-6 flex flex-col h-full">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-800">
+                <div className="p-6 flex flex-col h-full flex-1 justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800 mb-1">
                       {property.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-600 text-sm mb-4 min-h-[48px] flex items-center">
                       {property.address}
                     </p>
-
+                    <hr className="border-t border-gray-300 mb-4" />
                     {/* Facilities */}
-                    <div className="grid grid-cols-3 gap-4 text-gray-600 text-sm mb-6 min-h-[72px]">
-                      {property.facilities.map((f, i) => (
+                    <div className="grid grid-cols-2 gap-4 text-gray-600 text-sm mb-6 min-h-[96px]">
+                      {property.facilities && property.facilities.slice(0, 4).map((f, i) => (
                         <div key={i} className="flex items-center gap-2">
-                          {f.icon}
+                          {getIconComponent(f.icon)}
                           <span>{f.label}</span>
                         </div>
                       ))}

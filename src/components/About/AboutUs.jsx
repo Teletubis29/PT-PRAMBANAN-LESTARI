@@ -19,7 +19,7 @@ const AboutUs = () => {
         {/* Kiri: Teks dan statistik */}
         <div>
           {/* <p className="text-sm text-gray-400 mb-2 italic">About us</p> */}
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-1">
+          {/* <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-1">
             Siapa kami ?
           </h2>
           <h3 className="text-lg md:text-xl font-semibold text-gray-500 mb-4">
@@ -44,7 +44,8 @@ const AboutUs = () => {
             dengan harga yang wajar. Kami percaya bahwa agar efektif, ruang
             kerja harus mencerminkan nilai-nilai estetika baik eksterior maupun
             interior.
-          </p>
+          </p> */}
+          diganti jadi visi dan misi next soon
           {/* Statistik */}
           <div className="flex gap-4 mt-6">
             <div className="bg-gray-300 rounded-lg px-6 py-3 flex flex-col items-center min-w-[90px] flex-1">

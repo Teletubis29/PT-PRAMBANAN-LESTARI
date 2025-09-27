@@ -1,205 +1,139 @@
 const productsData = [
   {
     id: 1,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 jakarta",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
+    title: "UTAN KAYU OFFICE",
+    address: "Jl. Utan Kayu Raya No. 86, Jakarta Timur",
+    image: "/images/gbr/utan-kayu.jpg",
     soldOut: false,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+    luasBangunan: { A: "572.5m2", B: "558m2" },
+    luasTanah: { A: "220m2", B: "226m2" },
+    luasTanahSertifikat: "448 m2 (total)",
+    sertifikat: "Hak Milik (SHM)",
+    bangunan: "5 lantai",
+    dayaListrik: "40 Kva",
+    lift: "tiap unit memiliki 1 lift kapasitas 8 passanger",
+    fasilitasUmum: [
+      "Tiap Lantai tersedia kamar mandi",
+      "@2 Line Telepon (tidak termasuk PABX)",
+      "AC Cassette + Split merk Daikin",
+      "Fire System : smoke detector & APAR (Fire Extinguisher)"
     ],
+    facilities: [
+      { icon: "FaToilet", label: "Closet duduk TOTO" },
+      { icon: "FaTint", label: "Air Jetpump (sumur)" },
+      { icon: "FaThLarge", label: "Granit Lantai 60x60cm" },
+      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" }
+    ],
+    lokasi: [
+      { icon: "FaMapMarkerAlt", text: "5 MENIT DARI BYPASS & PRAMUKA" },
+      { icon: "FaMapMarkerAlt", text: "5 MENIT TOL DALAM KOTA" },
+      { icon: "FaMapMarkerAlt", text: "10 MENIT DARI STASIUN KRAMAT" }
+    ],
+    marketingContact: [
+      "082-123-368-560",
+      "081-399"
+    ]
   },
   {
     id: 2,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1393538022/id/foto/desain-townhouse-modern.jpg?s=2048x2048&w=is&k=20&c=pwI0LH7Nm_O0ADLqhWU5MaSFYALvXTc4NZRqMxHR5iU=",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+    title: "GEDUNG GRAND MAMPANG OFFICE",
+    address: "Jl. Mampang Prapatan raya No.19,21,22, Kel. Mampang Prapatan, Jakarta Selatan",
+    image: "/images/gbr/grand-mampang.jpg", // Ganti dengan path gambar yang sesuai
+    soldOut: false,
+    luasTanahSertifikat: "843 m2",
+    luasBangunan: "± 3229 m2",
+    sertifikat: "Hak Milik (SHM)",
+    bangunan: "7 Lantai + Basement",
+    fasilitasUmum: [
+      "Tiap Lantai ada 2 kamar mandi",
+      "Closed duduk TOTO",
+      "Listrik +/- 164000 Watt",
+      "Air Jetpump (sumur)",
+      "2 Line Telepon (Tidak termasuk PABX)"
     ],
+    facilities: [
+      { icon: "FaWarehouse", label: "Basement" },
+      { icon: "FaBolt", label: "Penangkal Petir radius ex. KURN" },
+      { icon: "FaSnowflake", label: "AC Ducting DAIKIN" },
+      { icon: "FaArrowAltCircleUp", label: "LIFT SIGMA 1 Unit (11 orang)" },
+      { icon: "FaVideo", label: "CCTV (Outdoor & Indoor)" },
+      { icon: "FaFireExtinguisher", label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)" },
+      { icon: "FaChargingStation", label: "Genset Perkins +/- 150 KVA" },
+    ]
   },
-   {
+  {
     id: 3,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+    title: "GEDUNG PANCORAN 2 OFFICE",
+    address: "Jl. Raya Pasar Minggu No.20, Kel. Pancoran, Jakarta Selatan",
+    image: "/images/gbr/pancoran2.jpg", // Ganti dengan path gambar yang sesuai
+    soldOut: false,
+    luasTanahFisik: "± 830 m2 (17,7 x 44,85 mtr)",
+    luasTanahSertifikat: "778 m2",
+    luasBangunan: "± 1.829 m2",
+    bangunan: "7 Lantai",
+    sertifikat: "Surat Hak Guna Bangunan (SHGB)",
+    sertifikatBerlaku: "26-Juni-2033",
+    detailLantai: [
+      "Lantai 1 (10 x 19,85 mtr)",
+      "Lantai 2 - 7 (13 x 19,85 mtr)"
     ],
+    fasilitasUmum: [
+      "Tiap Lantai ada 2 kamar mandi",
+      "Closed duduk TOTO",
+      "Listrik +/- 164000 Watt",
+      "Air Jetpump (sumur)",
+      "2 Line Telepon (Tidak termasuk PABX)"
+    ],
+    facilities: [
+      { icon: "FaVideo", label: "CCTV (Outdoor & Indoor)" },
+      { icon: "FaSnowflake", label: "AC Ducting DAIKIN" },
+      { icon: "FaChargingStation", label: "Genset Perkins +/- 150 KVA" },
+      { icon: "FaArrowAltCircleUp", label: "LIFT SIGMA 1 Unit (11 orang)" },
+      { icon: "FaFireExtinguisher", label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)" },
+      { icon: "FaBolt", label: "Penangkal Petir radius ex. KURN" },
+      { icon: "FaCar", label: "Parkir Mobil & Motor" }
+    ]
   },
-   {
+  {
     id: 4,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1393538022/id/foto/desain-townhouse-modern.jpg?s=2048x2048&w=is&k=20&c=pwI0LH7Nm_O0ADLqhWU5MaSFYALvXTc4NZRqMxHR5iU=",
+    title: "DEWI SARTIKA OFFICE",
+    address: "Jl. Dewi sartika Raya No.3131, Kel. Cawang, Jakarta Timur",
+    image: "/images/gbr/dewi-sartika.jpg", 
     soldOut: false,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+    luasTanah: "285 m2 (9.15 x 31.5 meter)",
+    luasBangunan: "755 m2 (8.8 x 17 meter)",
+    luasTanahSertifikat: "285 m2",
+    sertifikat: "Surat Hak Guna Bangunan (SHGB)",
+    sertifikatBerlaku: "23-10-2049",
+    bangunan: "5 Lantai + lantai dak",
+    dayaListrik: "50 Kva",
+    lift: "1 unit kapasitas 8 passanger",
+    fasilitasUmum: [
+      "Tiap Lantai tersedia 1 kamar mandi",
+      "1 Line Telepon (tidak termasuk PABX)",
+      "AC Cassette Daikin",
+      "Smoke Detector & APAR"
     ],
-  },
-   {
-    id: 5,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
-    soldOut: false,
     facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+      { icon: "FaToilet", label: "Closet duduk TOTO" },
+      { icon: "FaTint", label: "Air Jetpump (sumur)" },
+      { icon: "FaThLarge", label: "Granit Lantai 60x60cm" },
+      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" }
     ],
-  },
-   {
-    id: 6,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1393538022/id/foto/desain-townhouse-modern.jpg?s=2048x2048&w=is&k=20&c=pwI0LH7Nm_O0ADLqhWU5MaSFYALvXTc4NZRqMxHR5iU=",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+    fasilitas: [
+      "Parkir kendaraan mobil 8 unit",
+      "Parkir Motor 10 unit",
+      "Penangkal Petir"
     ],
-  }, {
-    id: 7,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
+    lokasi: [
+      { icon: "FaMapMarkerAlt", text: "10 MENIT GERBANG TOL CAWANG" },
+      { icon: "FaMapMarkerAlt", text: "10 MENIT TOL DALAM KOTA & JAGORAWI" },
+      { icon: "FaMapMarkerAlt", text: "15 MENIT STASIUN KALIBATA" }
     ],
-  }, {
-    id: 8,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
-  }, {
-    id: 9,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
-    soldOut: false,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
-  }, {
-    id: 10,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://media.istockphoto.com/id/1720607427/id/foto/rumah-kota-modern.jpg?s=2048x2048&w=is&k=20&c=NidhdM1Ioz2CmQO2hdi_u9lknTk4fNgsMfwhaJJoIY0=",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
-  }, {
-    id: 11,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
-  }, {
-    id: 12,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
-  }, {
-    id: 13,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
-  }, {
-    id: 14,
-    title: "Building",
-    address: "Jl. Tanah koja no. 17 surabaya",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-    soldOut: true,
-    facilities: [
-      { icon: "FaHome", label: "Lift" },
-      { icon: "FaToilet", label: "Toilet" },
-      { icon: "FaWater", label: "Water" },
-      { icon: "FaBolt", label: "Listrik" },
-      { icon: "FaLayerGroup", label: "Lantai keramik" },
-      { icon: "FaBuilding", label: "Ciling tinggi" },
-    ],
+    marketingContact: [
+      "082-123-368-560",
+      "081-399-825-678"
+    ]
   },
 ];
 

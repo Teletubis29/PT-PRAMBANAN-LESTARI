@@ -10,6 +10,6 @@ export default function Sale() {
     <Categories />
     <Products />
     <SectionSale/>
-    <RecentSale/>
+    {/* <RecentSale/> */}
   </div>;
 }

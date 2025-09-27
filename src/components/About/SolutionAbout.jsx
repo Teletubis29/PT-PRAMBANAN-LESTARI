@@ -17,7 +17,7 @@ export default function SolutionAbout() {
           </div>
           <div className="h-full w-full">
             <img
-              src="https://png.pngtree.com/thumb_back/fh260/background/20240822/pngtree-a-photo-of-beautiful-new-modern-houses-in-residential-area-with-image_16171409.jpg"
+              src="/images/gbr/solusi.jpg"
               alt="Solusi Gedung Rumah"
               className="w-full h-full object-cover"
               style={{ minHeight: '100%', minWidth: '100%' }}
