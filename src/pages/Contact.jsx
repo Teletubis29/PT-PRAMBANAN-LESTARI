@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from "react";
 import { FaEnvelope, FaPhoneAlt, FaComments } from "react-icons/fa";
+import kontakBanner from "/images/partial/kontakfix.jpg";
 
 const Contact = () => {
   const [animate, setAnimate] = useState(false);
@@ -8,37 +10,47 @@ const Contact = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <section className="min-h-[70vh] w-full bg-slate-50 py-16 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-2">Kontak Kami</h2>
-          <p className="text-gray-600 mb-10">Kami siap membantu Anda</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Card 1 */}
-          <div className={`bg-white rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="bg-orange-500 rounded-full p-4 mb-4 flex items-center justify-center">
-              <FaPhoneAlt size={32} className="text-white" />
+    <section className="min-h-[70vh] w-full bg-slate-50">
+        <div className="relative w-full h-[60vh] md:h-[70vh]">
+          <img
+            src={kontakBanner}
+            alt="Banner Kontak"
+            className="w-full h-full md:h-full object-cover shadow"
+          />
+          <div className="absolute inset-0 bg-black/40  flex items-center">
+            <div className="pl-8 md:pl-52 text-left">
+              <h2 className="text-2xl md:text-6xl font-bold text-white mb-2 drop-shadow-lg">Kontak Kami</h2>
+              <p className="text-white text-lg md:text-2xl drop-shadow mb-0 ml-1">Kami siap membantu Anda</p>
             </div>
-            <h3 className="text-lg font-semibold mb-2 text-black">Telepon Kami</h3>
-            <a href="tel:+6281234567890" className="text-black  hover:underline hover:text-orange-500">(+62) 812-3456-7890</a>
+          </div>
+        </div>
+      <div className="max-w-5xl mx-auto">
+      
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-28">
+          {/* Card 1 */}
+          <div className={`bg-[#6D777D] rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-white rounded-full p-4 mb-4 flex items-center justify-center">
+              <FaPhoneAlt size={32} className="text-orange-500" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2 text-white">Telepon Kami</h3>
+            <a href="tel:+6281234567890" className="text-white  hover:underline hover:text-orange-500">(+62) 812-3456-7890</a>
           </div>
           {/* Card 2 */}
-          <div className={`bg-white rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 delay-150'}`}>
-            <div className="bg-orange-500 rounded-full p-4 mb-4 flex items-center justify-center">
-              <FaComments size={32} className="text-white" />
+          <div className={`bg-[#6D777D] rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 delay-150'}`}>
+            <div className="bg-white rounded-full p-4 mb-4 flex items-center justify-center">
+              <FaComments size={32} className="text-orange-500" />
             </div>
-            <h3 className="text-lg font-semibold mb-2 text-black">Chat Langsung</h3>
-            <p className="text-black text-sm mb-2 text-center">Tersedia Senin - Jumat &nbsp; (09.00-17.00 WIB)</p>
+            <h3 className="text-lg font-semibold mb-2 text-white">Chat Langsung</h3>
+            <p className="text-white text-sm mb-2 text-center">Tersedia Senin - Jumat &nbsp; (09.00-17.00 WIB)</p>
             <button className="bg-orange-500 text-white px-4 py-2 rounded font-medium mt-2 hover:bg-orange-600 transition">Chat Sekarang</button>
           </div>
           {/* Card 3 */}
-          <div className={`bg-white rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 delay-300'}`}>
-            <div className="bg-orange-500 rounded-full p-4 mb-4 flex items-center justify-center">
-              <FaEnvelope size={32} className="text-white" />
+          <div className={`bg-[#6D777D] rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 delay-300'}`}>
+            <div className="bg-white rounded-full p-4 mb-4 flex items-center justify-center">
+              <FaEnvelope size={32} className="text-orange-500" />
             </div>
-            <h3 className="text-lg font-semibold mb-2 text-black">Kirim Pertanyaan</h3>
-            <p className="text-black text-sm mb-2 text-center">Isi formulir, kami akan balas dalam 24 jam.</p>
+            <h3 className="text-lg font-semibold mb-2 text-white">Kirim Pertanyaan</h3>
+            <p className="text-white text-sm mb-2 text-center">Isi formulir, kami akan balas dalam 24 jam.</p>
             <button className="bg-orange-500 text-white px-4 py-2 rounded font-medium mt-2 hover:bg-orange-600 transition">Mulai</button>
           </div>
         </div>

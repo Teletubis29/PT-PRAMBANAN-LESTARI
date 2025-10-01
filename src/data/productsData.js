@@ -16,28 +16,26 @@ const productsData = [
       "Tiap Lantai tersedia kamar mandi",
       "@2 Line Telepon (tidak termasuk PABX)",
       "AC Cassette + Split merk Daikin",
-      "Fire System : smoke detector & APAR (Fire Extinguisher)"
+      "Fire System : smoke detector & APAR (Fire Extinguisher)",
     ],
     facilities: [
       { icon: "FaToilet", label: "Closet duduk TOTO" },
       { icon: "FaTint", label: "Air Jetpump (sumur)" },
       { icon: "FaThLarge", label: "Granit Lantai 60x60cm" },
-      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" }
+      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" },
     ],
     lokasi: [
       { icon: "FaMapMarkerAlt", text: "5 MENIT DARI BYPASS & PRAMUKA" },
       { icon: "FaMapMarkerAlt", text: "5 MENIT TOL DALAM KOTA" },
-      { icon: "FaMapMarkerAlt", text: "10 MENIT DARI STASIUN KRAMAT" }
+      { icon: "FaMapMarkerAlt", text: "10 MENIT DARI STASIUN KRAMAT" },
     ],
-    marketingContact: [
-      "082-123-368-560",
-      "081-399"
-    ]
+    marketingContact: ["082-123-368-560", "081-399"],
   },
   {
     id: 2,
     title: "GEDUNG GRAND MAMPANG OFFICE",
-    address: "Jl. Mampang Prapatan raya No.19,21,22, Kel. Mampang Prapatan, Jakarta Selatan",
+    address:
+      "Jl. Mampang Prapatan raya No.19,21,22, Kel. Mampang Prapatan, Jakarta Selatan",
     image: "/images/gbr/grand-mampang.jpg", // Ganti dengan path gambar yang sesuai
     soldOut: false,
     luasTanahSertifikat: "843 m2",
@@ -49,7 +47,7 @@ const productsData = [
       "Closed duduk TOTO",
       "Listrik +/- 164000 Watt",
       "Air Jetpump (sumur)",
-      "2 Line Telepon (Tidak termasuk PABX)"
+      "2 Line Telepon (Tidak termasuk PABX)",
     ],
     facilities: [
       { icon: "FaWarehouse", label: "Basement" },
@@ -57,9 +55,12 @@ const productsData = [
       { icon: "FaSnowflake", label: "AC Ducting DAIKIN" },
       { icon: "FaArrowAltCircleUp", label: "LIFT SIGMA 1 Unit (11 orang)" },
       { icon: "FaVideo", label: "CCTV (Outdoor & Indoor)" },
-      { icon: "FaFireExtinguisher", label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)" },
+      {
+        icon: "FaFireExtinguisher",
+        label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)",
+      },
       { icon: "FaChargingStation", label: "Genset Perkins +/- 150 KVA" },
-    ]
+    ],
   },
   {
     id: 3,
@@ -75,30 +76,33 @@ const productsData = [
     sertifikatBerlaku: "26-Juni-2033",
     detailLantai: [
       "Lantai 1 (10 x 19,85 mtr)",
-      "Lantai 2 - 7 (13 x 19,85 mtr)"
+      "Lantai 2 - 7 (13 x 19,85 mtr)",
     ],
     fasilitasUmum: [
       "Tiap Lantai ada 2 kamar mandi",
       "Closed duduk TOTO",
       "Listrik +/- 164000 Watt",
       "Air Jetpump (sumur)",
-      "2 Line Telepon (Tidak termasuk PABX)"
+      "2 Line Telepon (Tidak termasuk PABX)",
     ],
     facilities: [
       { icon: "FaVideo", label: "CCTV (Outdoor & Indoor)" },
       { icon: "FaSnowflake", label: "AC Ducting DAIKIN" },
       { icon: "FaChargingStation", label: "Genset Perkins +/- 150 KVA" },
       { icon: "FaArrowAltCircleUp", label: "LIFT SIGMA 1 Unit (11 orang)" },
-      { icon: "FaFireExtinguisher", label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)" },
+      {
+        icon: "FaFireExtinguisher",
+        label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)",
+      },
       { icon: "FaBolt", label: "Penangkal Petir radius ex. KURN" },
-      { icon: "FaCar", label: "Parkir Mobil & Motor" }
-    ]
+      { icon: "FaCar", label: "Parkir Mobil & Motor" },
+    ],
   },
   {
     id: 4,
     title: "DEWI SARTIKA OFFICE",
     address: "Jl. Dewi sartika Raya No.3131, Kel. Cawang, Jakarta Timur",
-    image: "/images/gbr/dewi-sartika.jpg", 
+    image: "/images/gbr/dewi-sartika.jpg",
     soldOut: false,
     luasTanah: "285 m2 (9.15 x 31.5 meter)",
     luasBangunan: "755 m2 (8.8 x 17 meter)",
@@ -112,27 +116,113 @@ const productsData = [
       "Tiap Lantai tersedia 1 kamar mandi",
       "1 Line Telepon (tidak termasuk PABX)",
       "AC Cassette Daikin",
-      "Smoke Detector & APAR"
+      "Smoke Detector & APAR",
     ],
     facilities: [
       { icon: "FaToilet", label: "Closet duduk TOTO" },
       { icon: "FaTint", label: "Air Jetpump (sumur)" },
       { icon: "FaThLarge", label: "Granit Lantai 60x60cm" },
-      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" }
+      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" },
     ],
     fasilitas: [
       "Parkir kendaraan mobil 8 unit",
       "Parkir Motor 10 unit",
-      "Penangkal Petir"
+      "Penangkal Petir",
     ],
     lokasi: [
       { icon: "FaMapMarkerAlt", text: "10 MENIT GERBANG TOL CAWANG" },
       { icon: "FaMapMarkerAlt", text: "10 MENIT TOL DALAM KOTA & JAGORAWI" },
-      { icon: "FaMapMarkerAlt", text: "15 MENIT STASIUN KALIBATA" }
+      { icon: "FaMapMarkerAlt", text: "15 MENIT STASIUN KALIBATA" },
     ],
-    marketingContact: [
-      "082-123-368-560",
-      "081-399-825-678"
+    marketingContact: ["082-123-368-560", "081-399-825-678"],
+  },
+  {
+    id: 5,
+    title: "GEDUNG GRAND OTISTA37 OFFICE",
+    address: "Jl. Otto Iskandar Dinata No.37, Kel. Bidaracina, Jakarta Timur",
+    image: "/images/gbr/grand-otista.jpg",
+    soldOut: false,
+    luasTanahSertifikat: "1212 m2",
+    luasBangunan: "± 3060 m2 (9x24 m)",
+    sertifikat: "Surat Hak Guna Bangunan (SHGB)",
+    sertifikatBerlaku: "04-08-2038",
+    bangunan: "6 Lantai + Basement",
+    fasilitasUmum: [
+      "Tiap Lantai ada 2 kamar mandi",
+      "Closed duduk TOTO",
+      "Listrik +/- 164000 Watt",
+      "Air Jetpump (sumur)",
+      "2 Line Telepon (Tidak termasuk PABX)",
+    ],
+    facilities: [
+      { icon: "FaWarehouse", label: "Basement" },
+      { icon: "FaArrowAltCircleUp", label: "LIFT SIGMA 1 Unit (11 orang)" },
+      { icon: "FaSnowflake", label: "AC Ducting DAIKIN" },
+      { icon: "FaBolt", label: "Penangkal Petir radius ex. KURN" },
+      {
+        icon: "FaFireExtinguisher",
+        label: "Sprinkler & Fire Alarm lengkap (Hydrant, Smoke Detector)",
+      },
+      { icon: "FaVideo", label: "CCTV (Outdoor & Indoor)" },
+      { icon: "FaChargingStation", label: "Genset Perkins +/- 150 KVA" },
+    ],
+  },
+  {
+    id: 6,
+    title: "JATINEGARA BARAT OFFICE",
+    address:
+      "Jl. Jatinegara Barat 1 dan 2 No.13, Kel. Balimester, Jakarta Timur",
+    image:
+      "https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg", // Ganti dengan path gambar yang sesuai
+    soldOut: false,
+    luasTanah: "± 382.5 m2 (9 x 44 mtr) / unit",
+    luasBangunan: "± 1038 m2 (9 x 29 mtr) / unit",
+    sertifikat: "Surat Hak Guna Bangunan (SHGB) sudah dipecah",
+    sertifikatBerlaku: "Exp. 13-Maret-2041",
+    dayaListrik: "@ 45000 Watt /Unit",
+    fasilitasUmum: [
+      "1 Line Telepon / unit",
+      "Tiap Lantai ada 2 kamar mandi (kecuali lt. 1)",
+      "Closed duduk TOTO",
+      "Air Jetpump (sumur)",
+      "Akses jalan tembus ke jalan Jatinegara Barat 2.",
+    ],
+    facilities: [
+      { icon: "FaVideo", label: "CCTV (Outdoor & Indoor)" },
+      {
+        icon: "FaArrowAltCircleUp",
+        label: "LIFT SIGMA 1 Unit (8 orang)",
+      },
+      { icon: "FaSnowflake", label: "AC Cassette DAIKIN" },
+      { icon: "FaBolt", label: "Penangkal Petir" },
+      { icon: "FaFireExtinguisher", label: "Alat pemadam APPAR / lantai" },
+      { icon: "FaCar", label: "Parkir kendaraan mobil 7 unit" },
+      { icon: "FaMotorcycle", label: "Parkir Motor" },
+      {
+        icon: "FaFireExtinguisher",
+        label: "Smoke Detector (Deteksi pemadam kebakaran)",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Tanah Polonia",
+    address: "Jl. Cipinang Cempedak II, Jakarta Timur",
+    image:
+      "https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg", // Ganti dengan path gambar yang sesuai
+    soldOut: false,
+    luasTanah: "724 m2",
+    sertifikat: "HGB exp.13.05.204",
+    peruntukan: "Pemukiman",
+    ketinggian: ["2 lantai (KDB 60%)", "3 lantai (KDB 40%)"],
+    rowJalan: "6 meter",
+    facilities: [
+      { icon: "FaRoad", label: "Dekat Akses Tol" },
+      { icon: "FaTrain", label: "Dekat Stasiun LRT" },
+      { icon: "FaBus", label: "Dekat Terminal" },
+      { icon: "FaUtensils", label: "Dekat Area Food & Beverage" },
+      { icon: "FaBuilding", label: "Dekat Perkantoran" },
+      { icon: "FaHotel", label: "Dekat Area Hospitality" },
     ]
   },
 ];
