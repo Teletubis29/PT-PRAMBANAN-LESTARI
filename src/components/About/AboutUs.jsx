@@ -58,9 +58,8 @@ const AboutUs = () => {
         {/* Kanan: Gambar */}
         <div className="flex justify-center">
           <img
-            src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Gedung PT Prambanan Lestari"
-            className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+            src="/images/gbr/visi-misi.jpg "
+            className="shadow-lg w-full max-w-md object-cover"
           />
         </div>
       </div>

@@ -26,8 +26,10 @@ const Categories = () => {
             onClick={() => {
               if (item.label === "Jasa Arsitektur") {
                 navigate("/jasa-arsitektur");
-              } else if (item.label === "Jasa Interior") {
+              } if (item.label === "Jasa Interior") {
                 navigate("/jasa-interior");
+              } else if (item.label === "Our Experience") {
+                navigate("/our-experience");
               }
             }}
           >

@@ -1,48 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-const HeroSale = () => {
-  const [showH1, setShowH1] = useState(false);
-  const [showP, setShowP] = useState(false);
+export default function HeroAbout() {
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setShowH1(true), 100);
-    const timer2 = setTimeout(() => setShowP(true), 500);
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
+    const timer = setTimeout(() => setAnimate(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div>
-      <section
-        className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-start bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'url("/images/banners/header-properti1.jpg")',
-        }}
-      >
-        {/* Overlay putih transparan */}
-        <div className="absolute inset-0 bg-white bg-opacity-70" />
-        {/* Konten */}
-        <div className="relative z-10 max-w-2xl ml-8 md:ml-16 p-6 rounded-lg">
-          <h1
-            className={`text-2xl md:text-4xl lg:text-5xl font-extrabold text-gray-700 mb-4 leading-tight transition-all duration-1000 ${showH1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-32'}`}
-          >
-            BUAT KANTOR ANDA DENGAN <br /> GEDUNG AREA STRATEGIS
-          </h1>
-          <p
-            className={`text-gray-700 text-base md:text-lg font-medium transition-all duration-1000 ${showP ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-32'}`}
-          >
-            Prambanan Lestari adalah perusahaan jasa konstruksi, konsultan
-            arsitektur dan desain interior, yang berdiri dan mulai beroperasi di
-            Jakarta sejak tahun 1997. Perusahaan yang berpengalaman mengerjakan
-            berbagai proyek bangunan komersial hingga residensial seperti
-          </p>
-        </div>
-      </section>
-    </div>
-  );
-};
+    <section
+      className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-start bg-cover bg-center"
+      style={{
+        backgroundImage: 'url("/images/banners/header-properti1.jpg")'
+      }}
+    >
+      {/* Overlay putih transparan (bukan mengaburkan gambar, hanya membuat teks lebih terbaca) */}
+      {/* <div className="absolute inset-0 bg-white bg-opacity-70" /> */}
 
-export default HeroSale;
+      {/* Konten teks */}
+      <div className="relative z-10 max-w-2xl ml-8 md:ml-16 p-6 rounded-lg">
+        <h1
+          className={`text-2xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight transition-all duration-1000 ${
+            animate ? "opacity-100 translate-x-0" : "opacity-0 translate-x-32"
+          }`}
+        >
+          Memaksimalkan Aspek Visual & Fungsional Arsitektur
+        </h1>
+
+        <p
+          className={`text-white text-base md:text-lg font-medium transition-all duration-1000 ${
+            animate ? "opacity-100 translate-x-0 delay-300" : "opacity-0 translate-x-32"
+          }`}
+        >
+          Kami berkomitmen menghadirkan desain arsitektur yang tidak hanya indah,
+          namun juga fungsional serta berkelanjutan — menciptakan ruang yang
+          nyaman dan bermakna.
+        </p>
+      </div>
+    </section>
+  );
+}

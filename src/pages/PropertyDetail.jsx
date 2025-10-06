@@ -74,7 +74,7 @@ const PropertyDetail = () => {
               <img
                 src={property.image}
                 alt={property.title}
-                className="w-full h-64 md:h-96 object-cover"
+                className="w-full h-64 md:h-96 object-contain bg-gray-100"
               />
             </div>
 

@@ -7,8 +7,7 @@ const sectionData = [
     desc: "Gedung & 2 unit Rukan Kalimalang - Kami hadir dengan proyek gedung yang dirancang untuk mendukung setiap ambisi, mengubah visi Anda menjadi kenyataan yang megah. Setiap Ide Bisnis layak punya tempat terbaik. Bangunan kantor yang di rancang dengan keunikan model menjadikan sebuah Icon perusahaan. Desain yang kami kerjakan dengan ketinggian dibawah 10 lantai guna mempermudah maintenance gedung. Komersial properti meliputi perkantoran, pabrik, mal, kafe, restoran, ritel, apartemen, pusat medis, rumah sakit dan lainnya.",
     bg: "bg-white",
     images: [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+      "/images/gbr/proyek-baru-gedung.jpg",
     ],
   },
   {
@@ -18,7 +17,6 @@ const sectionData = [
     bg: "bg-gray-300",
     images: [
       "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=400&q=80",
     ],
   },
   {
@@ -28,7 +26,6 @@ const sectionData = [
     bg: "bg-white",
     images: [
       "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=400&q=80",
     ],
   },
 ];
@@ -58,7 +55,7 @@ const SectionSale = () => {
                   key={i}
                   src={img}
                   alt={section.title + i}
-                  className="w-64 h-64 object-cover rounded shadow"
+                  className="w-72 h-72 object-cover rounded shadow"
                 />
               ))}
             </div>

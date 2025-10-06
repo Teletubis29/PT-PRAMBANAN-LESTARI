@@ -4,12 +4,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Sale from "./pages/Sale";
 import Gallery from "./pages/Gallery";
+import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Pembayaran from "./pages/Pembayaran";
 import PropertyDetail from "./pages/PropertyDetail";
 import PackageArchitect from "./components/Pembayaran/PackageArchitect";
 import PackageInterior from "./components/Pembayaran/PackageInterior";
 import PackageConstruction from "./components/Pembayaran/PackageConstruction";
+import Architect from "./pages/Architect";
 
 function App() {
   return (
@@ -71,10 +73,10 @@ function App() {
           }
         />
         <Route
-          path="/pembayaran/jasa-arsitektur"
+          path="/jasa-arsitektur"
           element={
             <Layout>
-              <PackageArchitect />
+              <Architect />
             </Layout>
           }
         />
@@ -99,6 +101,14 @@ function App() {
           element={
             <Layout>
               <Gallery />
+            </Layout>
+          }
+        />
+          <Route
+          path="/our-experience"
+          element={
+            <Layout>
+              <Experience />
             </Layout>
           }
         />

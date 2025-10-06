@@ -3,7 +3,7 @@ import ClientAbout from "../components/About/ClientAbout";
 import HeroAbout from "../components/About/HeroAbout";
 import PortoAbout from "../components/About/PortoAbout";
 import SolutionAbout from "../components/About/SolutionAbout";
-import SuperiorityAbout from "../components/About/superiorityAbout";
+import SuperiorityAbout from "../components/About/SuperiorityAbout";
 import TrustAbout from "../components/About/TrustAbout";
 
 
@@ -15,7 +15,7 @@ export default function About() {
       <SolutionAbout />
       <SuperiorityAbout />
       <TrustAbout/>
-      <PortoAbout/>
+      {/* <PortoAbout/> */}
       <ClientAbout/>
     </div>
   );

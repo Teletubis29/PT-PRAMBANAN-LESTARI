@@ -173,7 +173,7 @@ const productsData = [
     address:
       "Jl. Jatinegara Barat 1 dan 2 No.13, Kel. Balimester, Jakarta Timur",
     image:
-      "/images/gbr/jatinegara-office.webp", // Ganti dengan path gambar yang sesuai
+      "/images/gbr/jatinegara.jpeg", // Ganti dengan path gambar yang sesuai
     soldOut: false,
     luasTanah: "± 382.5 m2 (9 x 44 mtr) / unit",
     luasBangunan: "± 1038 m2 (9 x 29 mtr) / unit",
