@@ -9,10 +9,11 @@ export default function SolutionAbout() {
               Mungkin saat ini Anda<br />sedang mengalami hal berikut:
             </h2>
             <ul className="space-y-4">
-              <li className="text-white text-base md:text-lg font-normal">Ingin mencari gedung tapi bingung mau ke mana?</li>
-              <li className="text-white text-base md:text-lg font-normal">Ingin membangun atau membeli gedung & desain interior rumah tapi khawatir desainnya kurang menarik.</li>
-              <li className="text-white text-base md:text-lg font-normal">Ingin membuat desain interior rumah tapi bingung mau ke mana?</li>
-              <li className="text-white text-base md:text-lg font-normal">Ingin merenovasi gedung atau interior rumah tapi khawatir hasilnya tidak sesuai harapan?</li>
+              <li className="text-white text-base md:text-lg font-normal">Ingin menginvestasikan dana dan mencari gedung property?</li>
+              <li className="text-white text-base md:text-lg font-normal">Ingin membangun atau membeli gedung dan juga desain interiornya, tapi khawatir desainnya kurang menarik?</li>
+              <li className="text-white text-base md:text-lg font-normal">Ingin membuat desain interior ruangan kantor, rumah, tapi khawatir tidak sesuai harapan?</li>
+              <li className="text-white text-base md:text-lg font-normal">Anda memiliki kendala yang dihadapi dunia property, salah memilih lokasi, salah menentukan design, salah pengerjaan konstruksi dan salah dalam pengecekan legal?</li>
+              <li className="text-white text-base md:text-lg font-bold bg-orange-500 p-3 rounded">Dari hal tersebut diatas, kami akan memberikan solusinya secara profesional & bertanggung jawab.</li>
             </ul>
           </div>
           <div className="h-full w-full">

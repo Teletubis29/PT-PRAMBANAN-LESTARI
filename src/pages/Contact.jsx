@@ -18,14 +18,13 @@ const Contact = () => {
             className="w-full h-full md:h-full object-cover shadow"
           />
           <div className="absolute inset-0 bg-black/40  flex items-center">
-            <div className="pl-8 md:pl-52 text-left">
+            <div className={`pl-8 md:pl-52 text-left transition-all duration-1000 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <h2 className="text-2xl md:text-6xl font-bold text-white mb-2 drop-shadow-lg">Kontak Kami</h2>
               <p className="text-white text-lg md:text-2xl drop-shadow mb-0 ml-1">Kami siap membantu Anda</p>
             </div>
           </div>
         </div>
       <div className="max-w-5xl mx-auto">
-      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-28">
           {/* Card 1 */}
           <div className={`bg-[#6D777D] rounded-xl shadow flex flex-col items-center py-8 px-4 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -55,7 +54,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Contact Form */}
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-28">
           <form className="space-y-6">
             <h4 className="text-xl font-semibold text-gray-700 mb-6 text-center">Formulir Kontak</h4>
             <div>

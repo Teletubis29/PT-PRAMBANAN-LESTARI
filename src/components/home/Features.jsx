@@ -3,13 +3,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useNavigate } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import productsData from "../../data/productsData";
 
 export default function FeaturedProperties() {
+  const navigate = useNavigate();
+  
   // Ambil semua property dari productsData
   const properties = productsData;
+  
+  // Handler untuk navigasi ke detail
+  const handleViewProperty = (propertyId) => {
+    navigate(`/properti/${propertyId}`);
+  };
   // Helper untuk render icon dari string
   const getIconComponent = (iconName) => {
     if (iconName.startsWith("Fa")) {
@@ -29,7 +37,6 @@ export default function FeaturedProperties() {
         <h2 className="text-center text-2xl md:text-4xl font-bold tracking-widest uppercase mb-10 text-orange-500">
           Market Properties
         </h2>
-
         <Swiper
           modules={[Navigation]}
           navigation
@@ -76,7 +83,10 @@ export default function FeaturedProperties() {
                   </div>
                   {/* Buttons */}
                   <div className="flex gap-3 mt-auto">
-                    <button className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                    <button 
+                      onClick={() => handleViewProperty(property.id)}
+                      className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
+                    >
                       View Properties
                     </button>
                   </div>

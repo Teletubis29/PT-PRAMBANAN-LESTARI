@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import productsData from "../../data/productsData";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
@@ -6,9 +7,15 @@ import * as MdIcons from "react-icons/md";
 const pageSize = 8;
 
 const Products = () => {
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const totalPages = Math.ceil(productsData.length / pageSize);
   const pagedProducts = productsData.slice((page - 1) * pageSize, page * pageSize);
+
+  // Handler untuk navigasi ke detail
+  const handleViewProperty = (propertyId) => {
+    navigate(`/properti/${propertyId}`);
+  };
 
   return (
     <section className=" min-h-screen py-8">
@@ -53,7 +60,10 @@ const Products = () => {
                   </div>
                   {/* Buttons */}
                   <div className="flex gap-3 mt-auto pt-6">
-                    <button className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                    <button 
+                      onClick={() => handleViewProperty(product.id)}
+                      className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
+                    >
                       View Properties
                     </button>
                   </div>

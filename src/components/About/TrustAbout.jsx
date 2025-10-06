@@ -35,7 +35,7 @@ export default function TrustAbout() {
             </div>
             <div className="flex items-center gap-2">
               <FaCheckCircle className="text-gray-700" />
-              <span className="text-gray-700">Portofolio yang beragam</span>
+              <span className="text-gray-700">PORTOFOLIO YANG BERAGAM</span>
             </div>
           </div>
         </div>

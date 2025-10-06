@@ -6,6 +6,7 @@ import Sale from "./pages/Sale";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Pembayaran from "./pages/Pembayaran";
+import PropertyDetail from "./pages/PropertyDetail";
 import PackageArchitect from "./components/Pembayaran/PackageArchitect";
 import PackageInterior from "./components/Pembayaran/PackageInterior";
 import PackageConstruction from "./components/Pembayaran/PackageConstruction";
@@ -50,6 +51,14 @@ function App() {
           element={
             <Layout>
               <Sale />
+            </Layout>
+          }
+        />
+        <Route
+          path="/properti/:id"
+          element={
+            <Layout>
+              <PropertyDetail />
             </Layout>
           }
         />

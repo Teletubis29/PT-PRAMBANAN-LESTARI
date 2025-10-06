@@ -173,7 +173,7 @@ const productsData = [
     address:
       "Jl. Jatinegara Barat 1 dan 2 No.13, Kel. Balimester, Jakarta Timur",
     image:
-      "https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg", // Ganti dengan path gambar yang sesuai
+      "/images/gbr/jatinegara-office.webp", // Ganti dengan path gambar yang sesuai
     soldOut: false,
     luasTanah: "± 382.5 m2 (9 x 44 mtr) / unit",
     luasBangunan: "± 1038 m2 (9 x 29 mtr) / unit",
@@ -209,7 +209,7 @@ const productsData = [
     title: "Tanah Polonia",
     address: "Jl. Cipinang Cempedak II, Jakarta Timur",
     image:
-      "https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg", // Ganti dengan path gambar yang sesuai
+      "/images/gbr/tanah-polonia.webp", // Ganti dengan path gambar yang sesuai
     soldOut: false,
     luasTanah: "724 m2",
     sertifikat: "HGB exp.13.05.204",

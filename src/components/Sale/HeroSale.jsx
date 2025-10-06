@@ -19,7 +19,7 @@ const HeroSale = () => {
         className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-start bg-cover bg-center"
         style={{
           backgroundImage:
-            'url("/images/banners/header-properti.jpg")',
+            'url("/images/banners/header-properti1.jpg")',
         }}
       >
         {/* Overlay putih transparan */}
