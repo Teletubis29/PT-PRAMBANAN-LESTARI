@@ -53,6 +53,13 @@ export default function FeaturedProperties() {
           color: #f97316 !important; /* Tailwind orange-500 */
           z-index: 20;
         }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       `}</style>
           {properties.map((property) => (
             <SwiperSlide key={property.id} className="h-full">
@@ -64,10 +71,13 @@ export default function FeaturedProperties() {
                 />
                 <div className="p-6 flex flex-col h-full flex-1 justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-1">
-                      {property.title}
+                    <h3 className="text-lg font-bold text-gray-800 h-14 flex items-start leading-tight">
+                      <span className="line-clamp-2">
+                        {property.title}
+                      </span>
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4 min-h-[48px] flex items-center">
+                    <hr className="border-t border-gray-300" />
+                    <p className="text-gray-600 text-sm mb-1 min-h-[48px] flex items-center">
                       {property.address}
                     </p>
                     <hr className="border-t border-gray-300 mb-4" />

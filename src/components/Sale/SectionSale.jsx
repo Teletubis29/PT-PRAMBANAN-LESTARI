@@ -6,9 +6,7 @@ const sectionData = [
     subtitle: "Projek baru",
     desc: "Gedung & 2 unit Rukan Kalimalang - Kami hadir dengan proyek gedung yang dirancang untuk mendukung setiap ambisi, mengubah visi Anda menjadi kenyataan yang megah. Setiap Ide Bisnis layak punya tempat terbaik. Bangunan kantor yang di rancang dengan keunikan model menjadikan sebuah Icon perusahaan. Desain yang kami kerjakan dengan ketinggian dibawah 10 lantai guna mempermudah maintenance gedung. Komersial properti meliputi perkantoran, pabrik, mal, kafe, restoran, ritel, apartemen, pusat medis, rumah sakit dan lainnya.",
     bg: "bg-white",
-    images: [
-      "/images/gbr/proyek-baru-gedung.jpg",
-    ],
+    images: ["/images/gbr/proyek-baru-gedung.jpg"],
   },
   {
     title: "Residentials",
@@ -32,7 +30,9 @@ const sectionData = [
 
 const SectionSale = () => {
   return (
-    <div className="w-full">
+    <div className="w-full -mt-16 md:-mt-32">
+      <hr className="border-t border-gray-300" />
+
       {sectionData.map((section, idx) => (
         <div key={idx} className={`${section.bg} py-8 px-0`}>
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-0">

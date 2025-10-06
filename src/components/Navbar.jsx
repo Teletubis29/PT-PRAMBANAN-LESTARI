@@ -46,13 +46,13 @@ export default function Navbar() {
           >
             Pembayaran
           </Button>
-          <Button
+          {/* <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}
             onClick={() => { navigate("/galeri"); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Galleri
-          </Button>
+          </Button> */}
           <Button
             color="inherit"
             sx={{ "&:hover": { color: "#fff", backgroundColor: "#f97316" } }}

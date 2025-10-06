@@ -18,9 +18,11 @@ const Products = () => {
   };
 
   return (
-    <section className=" min-h-screen py-8">
+    <section id="products-section" className="min-h-screen py-8">
       <div className="max-w-8xl mx-auto px-4">
-        <div className="text-gray-400 text-2xl mb-10 pl-2 font-bold">Menu/Categories/Building</div>
+        <h2 className="text-center text-gray-500 text-4xl mb-10 pl-2 font-extrabold mt-4">
+          Lihat Semua Properti
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {pagedProducts.map((product) => {
             // Helper render icon

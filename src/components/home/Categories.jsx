@@ -24,9 +24,18 @@ const Categories = () => {
             key={idx}
             className="flex flex-col items-center group cursor-pointer"
             onClick={() => {
-              if (item.label === "Jasa Arsitektur") {
+              if (item.label === "Penjualan Properti") {
+                navigate("/properti");
+                // Scroll ke Products section setelah navigasi
+                setTimeout(() => {
+                  const productsSection = document.getElementById('products-section');
+                  if (productsSection) {
+                    productsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 100);
+              } else if (item.label === "Jasa Arsitektur") {
                 navigate("/jasa-arsitektur");
-              } if (item.label === "Jasa Interior") {
+              } else if (item.label === "Jasa Interior") {
                 navigate("/jasa-interior");
               } else if (item.label === "Our Experience") {
                 navigate("/our-experience");

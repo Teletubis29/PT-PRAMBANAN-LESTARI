@@ -1,12 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import productsData from "../data/productsData";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const PropertyDetail = () => {
   const { id } = useParams();
   const property = productsData.find((p) => p.id === parseInt(id));
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Membuat array gambar - jika ada multiple images gunakan itu, jika tidak gunakan image utama
+  const images = property?.images || [property?.image];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (images.length > 1) {
+        if (e.key === 'ArrowLeft') {
+          prevImage();
+        } else if (e.key === 'ArrowRight') {
+          nextImage();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [images.length]);
 
   // Helper untuk render icon dari string
   const getIconComponent = (iconName) => {
@@ -69,13 +102,85 @@ const PropertyDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Image Gallery */}
+            {/* Image Gallery Slider */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-              <img
-                src={property.image}
-                alt={property.title}
-                className="w-full h-64 md:h-96 object-contain bg-gray-100"
-              />
+              <div className="relative">
+                {/* Main Image */}
+                <div className="relative h-64 md:h-[570px] overflow-hidden">
+                  <img
+                    src={images[currentImageIndex]}
+                    alt={`${property.title} - ${currentImageIndex + 1}`}
+                    className="w-full h-full object-contain bg-gray-100 transition-transform duration-300"
+                  />
+                  
+                  {/* Navigation Arrows - Only show if more than 1 image */}
+                  {images.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+                      >
+                        <ChevronLeftIcon className="w-6 h-6" />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+                      >
+                        <ChevronRightIcon className="w-6 h-6" />
+                      </button>
+                    </>
+                  )}
+
+                  {/* Image Counter */}
+                  {images.length > 1 && (
+                    <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                      {currentImageIndex + 1} / {images.length}
+                    </div>
+                  )}
+
+                  {/* Dots Indicator */}
+                  {images.length > 1 && (
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                      {images.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => goToImage(index)}
+                          className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                            currentImageIndex === index
+                              ? 'bg-white'
+                              : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Thumbnail Navigation - Only show if more than 1 image */}
+                {images.length > 1 && (
+                  <div className="p-4 bg-gray-50">
+                    <div className="flex gap-2 overflow-x-auto pb-2">
+                      {images.map((image, index) => (
+                        <button
+                          key={index}
+                          onClick={() => goToImage(index)}
+                          className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                            currentImageIndex === index
+                              ? 'border-orange-500 opacity-100'
+                              : 'border-gray-200 opacity-70 hover:opacity-100'
+                          }`}
+                        >
+                          <img
+                            src={image}
+                            alt={`Thumbnail ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Property Details */}
@@ -293,7 +398,7 @@ const PropertyDetail = () => {
                 <li>✓ After sales service</li>
               </ul>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
     </div>

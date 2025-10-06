@@ -96,14 +96,14 @@ function App() {
             </Layout>
           }
         />
-        <Route
+        {/* <Route
           path="/galeri"
           element={
             <Layout>
               <Gallery />
             </Layout>
           }
-        />
+        /> */}
           <Route
           path="/our-experience"
           element={
