@@ -470,6 +470,82 @@ const productsData = [
     disclaimer:
       "*Isi Spesifikasi di atas tidak mengikat dan dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.*",
   },
+  {
+    id: 16,
+    title: "PANCORAN 3 OFFICE",
+    address: "Jakarta Selatan",
+    image: "/images/gbr/16-pancoran-3/PANCORAN-3-RENDER.jpg",
+    images: [
+      "/images/gbr/16-pancoran-3/PANCORAN-3-RENDER.jpg",
+      "/images/gbr/16-pancoran-3/PANCORAN-3.jpg",
+    ],
+    soldOut: true,
+    forSale: false,
+    luasTanahSertifikat: "800 m2",
+    luasBangunan: "2100 m2",
+    bangunan: "6 Lt. + basement",
+    fasilitasUmum: [],
+    facilities: [],
+    disclaimer:
+      "*Isi Spesifikasi di atas tidak mengikat dan dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.*",
+  },
+  {
+    id: 17,
+    title: "PROKLAMASI OFFICE",
+    address: "Jakarta Pusat",
+    image: "/images/gbr/17-proklamasi/PROKLAMASI-OFFICE.webp",
+    images: [
+      "/images/gbr/17-proklamasi/PROKLAMASI-OFFICE.webp",
+      "/images/gbr/17-proklamasi/PROKLAMASI.jpg",
+    ],
+    soldOut: true,
+    forSale: false,
+    luasTanahSertifikat: "334 m2",
+    luasBangunan: "950 m2",
+    bangunan: "5 Lt",
+    fasilitasUmum: [],
+    facilities: [],
+    disclaimer:
+      "*Isi Spesifikasi di atas tidak mengikat dan dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.*",
+  },
+  {
+    id: 18,
+    title: "SUPOMO 48 OFFICE",
+    address: "Jakarta Selatan",
+    image: "/images/gbr/18-supomo/SUPOMO-48-RENDER.jpg",
+    images: [
+      "/images/gbr/18-supomo/SUPOMO-48-RENDER.jpg",
+      "/images/gbr/18-supomo/SUPOMO-48.jpg",
+    ],
+    soldOut: true,
+    forSale: false,
+    luasTanahSertifikat: "768 m2",
+    luasBangunan: "688 m2",
+    bangunan: "6 Lt",
+    fasilitasUmum: [],
+    facilities: [],
+    disclaimer:
+      "*Isi Spesifikasi di atas tidak mengikat dan dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.*",
+  },
+    {
+    id: 19,
+    title: "SUPOMO OFFICE",
+    address: "Jakarta Selatan",
+    image: "/images/gbr/19-supomo-office/SUPOMO-OFFICE-RENDER.webp",
+    images: [
+      "/images/gbr/19-supomo-office/SUPOMO-OFFICE-RENDER.webp",
+      "/images/gbr/19-supomo-office/SUPOMO-OFFICE.jpg",
+    ],
+    soldOut: true,
+    forSale: false,
+    luasTanahSertifikat: "1285 m2",
+    luasBangunan: "1641 m2",
+    bangunan: "6 Lt",
+    fasilitasUmum: [],
+    facilities: [],
+    disclaimer:
+      "*Isi Spesifikasi di atas tidak mengikat dan dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.*",
+  },
 ];
 
 export default productsData;

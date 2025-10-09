@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,10 +9,10 @@ import productsData from "../../data/productsData";
 
 export default function FeaturedProperties() {
   const navigate = useNavigate();
-  
+
   // Ambil semua property dari productsData
   const properties = productsData;
-  
+
   // Handler untuk navigasi ke detail
   const handleViewProperty = (propertyId) => {
     navigate(`/properti/${propertyId}`);
@@ -84,9 +83,7 @@ export default function FeaturedProperties() {
                 <div className="p-6 flex flex-col h-full flex-1 justify-between">
                   <div>
                     <h3 className="text-lg font-bold text-gray-800 h-14 flex items-start leading-tight">
-                      <span className="line-clamp-2">
-                        {property.title}
-                      </span>
+                      <span className="line-clamp-2">{property.title}</span>
                     </h3>
                     <hr className="border-t border-gray-300" />
                     <p className="text-gray-600 text-sm mb-1 min-h-[48px] flex items-center">
@@ -95,17 +92,27 @@ export default function FeaturedProperties() {
                     <hr className="border-t border-gray-300 mb-4" />
                     {/* Facilities */}
                     <div className="grid grid-cols-2 gap-4 text-gray-600 text-sm mb-6 min-h-[96px]">
-                      {property.facilities && property.facilities.slice(0, 4).map((f, i) => (
-                        <div key={i} className="flex items-center gap-2">
-                          {getIconComponent(f.icon)}
-                          <span>{f.label}</span>
+                      {property.soldOut ? (
+                        <div className="col-span-2 p-4 text-sm text-gray-500 italic text-center">
+                          Maaf, properti ini sudah tidak tersedia.
+                          <br />
+                          Kami siap membantu mencari alternatif terbaik untuk
+                          Anda.
                         </div>
-                      ))}
+                      ) : (
+                        property.facilities &&
+                        property.facilities.slice(0, 4).map((f, i) => (
+                          <div key={i} className="flex items-center gap-2">
+                            {getIconComponent(f.icon)}
+                            <span>{f.label}</span>
+                          </div>
+                        ))
+                      )}
                     </div>
                   </div>
                   {/* Buttons */}
                   <div className="flex gap-3 mt-auto">
-                    <button 
+                    <button
                       onClick={() => handleViewProperty(property.id)}
                       className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
                     >

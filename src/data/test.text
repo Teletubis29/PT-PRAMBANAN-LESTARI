@@ -312,21 +312,3 @@ const productsData = [
 export default productsData;
 
 
-{
-    id: 12,
-    title: "JATINEGARA 88 OFFICE",
-    address: "Jakarta Timur",
-    image: "/images/gbr/12-jatinegara-office/JATINEGARA-OFFICE.webp",
-    images: [
-      "/images/gbr/12-jatinegara-office/JATINEGARA-OFFICE.webp",
-    ],
-    soldOut: true,
-    forSale: false,
-    luasTanahSertifikat: "861.7 m2",
-    luasBangunan: "4145 m2",
-    bangunan: "6 Lt & basement",
-    fasilitasUmum: [],
-    facilities: [],
-    disclaimer:
-      "*Isi Spesifikasi di atas tidak mengikat dan dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.*",
-  },
