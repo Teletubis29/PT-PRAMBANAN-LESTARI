@@ -18,8 +18,8 @@ const Products = () => {
   };
 
   return (
-    <section id="products-section" className="min-h-screen py-8">
-      <div className="max-w-8xl mx-auto px-4">
+    <section id="products-section" className="min-h-screen pt-2">
+      <div className="max-w-8xl mx-auto px-4 py-6">
         <h2 className="text-center text-gray-500 text-4xl mb-10 pl-2 font-extrabold mt-4">
           Lihat Semua Properti
         </h2>
@@ -43,6 +43,9 @@ const Products = () => {
                   <img src={product.image} alt={product.title} className="w-full h-72 max-h-60 object-contain bg-white" />
                   {product.soldOut && (
                     <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">SOLD OUT</span>
+                  )}
+                  {product.forSale && !product.soldOut && (
+                    <span className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">FOR SALE</span>
                   )}
                 </div>
                 <div className="p-6 flex flex-col flex-1 h-full">

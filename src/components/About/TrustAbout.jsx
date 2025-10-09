@@ -13,7 +13,7 @@ export default function TrustAbout() {
         {/* Kanan: Judul, deskripsi, checklist */}
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Percayakan Kami Sekarang
+            Kami adalah mitra solusi properti anda.
           </h2>
           <div className="font-semibold text-gray-800 mb-4 leading-tight">
             Kepercayaan Anda adalah prioritas kami. Percayakan semua kebutuhan

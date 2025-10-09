@@ -11,37 +11,25 @@ export default function PackageServices() {
       id: 1,
       title: "PAKET A1",
       subtitle: "Rumah tinggal",
-      type: "standart",
+      type: "3 Pilihan Paket",
     },
     {
       id: 2,
       title: "PAKET A2",
-      subtitle: "Rumah tinggal",
-      type: "mewah",
+      subtitle: "Gedung",
+      type: "1 Pilihan Paket",
     },
     {
       id: 3,
       title: "PAKET A3",
-      subtitle: "Rumah tinggal",
-      type: "luxury",
+      subtitle: "Ruko",
+      type: "2 Pilihan Paket",
     },
     {
       id: 4,
-      title: "Jasa konstruksi",
-      subtitle: "Rumah toko",
-      type: "",
-    },
-    {
-      id: 5,
-      title: "Jasa konstruksi",
-      subtitle: "Rumah toko",
-      type: "Premium",
-    },
-    {
-      id: 6,
-      title: "Jasa konstruksi",
-      subtitle: "Gedung",
-      type: "5-8 lantai",
+      title: "PAKET A4",
+      subtitle: "Gudang",
+      type: "1 Pilihan Paket",
     },
   ];
 
@@ -69,12 +57,12 @@ export default function PackageServices() {
             </h2>
           </div>
 
-          {/* Package Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Package Grid - 2x2 Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className="bg-gray-100 rounded-2xl p-8 text-center min-h-[240px] flex flex-col justify-between"
+                className="bg-gray-100 rounded-2xl p-8 text-center min-h-[280px] flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Text Content */}
                 <div className="flex-1 flex flex-col justify-center mb-6">
@@ -129,45 +117,110 @@ export default function PackageServices() {
 
             {/* Modal Content - Scrollable */}
             <div className="flex-1 overflow-y-auto p-6">
-              {/* Price */}
-              <div className="mb-6 text-center">
-                <span className="inline-block bg-gray-100 text-gray-800 px-6 py-2 rounded-full text-lg font-semibold">
-                  {selectedPackage.price}
-                </span>
-              </div>
-
-              {/* Specifications */}
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
-                  Spesifikasi Detail:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {selectedPackage.specifications.map((spec, index) => (
+              {/* Check if selectedPackage has packages array (multiple packages) */}
+              {selectedPackage.packages ? (
+                // Multiple packages display
+                <div className="space-y-8">
+                  {selectedPackage.packages.map((pkg, pkgIndex) => (
                     <div
-                      key={index}
-                      className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg"
+                      key={pkg.packageId}
+                      className="border border-gray-200 rounded-lg p-6"
                     >
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div className="flex-1 min-w-0">
-                        <span className="font-semibold text-gray-800 block">
-                          {spec.feature}:
-                        </span>
-                        <span className="text-gray-600 text-sm">
-                          {spec.detail}
-                        </span>
+                      {/* Package Header */}
+                      <div className="mb-4 text-center">
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">
+                          {pkg.title}
+                        </h3>
+                        <p className="text-lg text-gray-600 mb-2">
+                          {pkg.subtitle}
+                        </p>
+                        <div className="mb-4">
+                          <span className="inline-block bg-blue-100 text-blue-800 px-6 py-2 rounded-full text-lg font-semibold">
+                            {pkg.price}
+                          </span>
+                        </div>
                       </div>
+
+                      {/* Package Specifications */}
+                      <div className="mb-4">
+                        <h4 className="text-lg font-bold text-gray-800 mb-3">
+                          Spesifikasi:
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {pkg.specifications.map((spec, index) => (
+                            <div
+                              key={index}
+                              className="flex items-start gap-2 p-2 bg-gray-50 rounded-lg"
+                            >
+                              <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="flex-1 min-w-0">
+                                <span className="font-semibold text-gray-800 block text-sm">
+                                  {spec.feature}:
+                                </span>
+                                <span className="text-gray-600 text-xs">
+                                  {spec.detail}
+                                </span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Package Additional Note */}
+                      {pkg.additionalNote && (
+                        <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <p className="text-xs text-yellow-800">
+                            {pkg.additionalNote}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
-              </div>
+              ) : (
+                // Single package display (original structure)
+                <>
+                  {/* Price */}
+                  <div className="mb-6 text-center">
+                    <span className="inline-block bg-gray-100 text-gray-800 px-6 py-2 rounded-full text-lg font-semibold">
+                      {selectedPackage.price}
+                    </span>
+                  </div>
 
-              {/* Additional Note */}
-              {selectedPackage.additionalNote && (
-                <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <p className="text-sm text-yellow-800">
-                    {selectedPackage.additionalNote}
-                  </p>
-                </div>
+                  {/* Specifications */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                      Spesifikasi Detail:
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {selectedPackage.specifications.map((spec, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg"
+                        >
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="flex-1 min-w-0">
+                            <span className="font-semibold text-gray-800 block">
+                              {spec.feature}:
+                            </span>
+                            <span className="text-gray-600 text-sm">
+                              {spec.detail}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Additional Note */}
+                  {selectedPackage.additionalNote && (
+                    <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                      <p className="text-sm text-yellow-800">
+                        {selectedPackage.additionalNote}
+                      </p>
+                    </div>
+                  )}
+                </>
               )}
             </div>
 

@@ -6,14 +6,13 @@ export default function PromoSection() {
         {/* LEFT TEXT */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-500">
-            Dapatkan promo spesial <br />
-            <span className="text-orange-500">DI SINI.</span>
+            Promo Akhir Tahun 2025 <br />
+            <span className="text-orange-500">GRATIS SOLAR PANEL SURAY</span>
           </h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
-            Sudah siap untuk mendapatkan promo terbaik tahun ini? <br /> PT
-            Prambanan Lestari punya promo spesial yang siap memanjakan Anda.{" "}
-            <br /> Ayo, tunggu apa lagi? <br />
-            Kunjungi kami sekarang juga!
+            Gunakan Energi Matahari, Hemat Sepanjang Hari <br /> Wujudkan rumah
+            dan bisnis yang mandiri energi bersama Solar Panel Suray. <br />{" "}
+            Info lebih lanjut hubungi kami. <br />
           </p>
           <button className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition">
             Chat Whatsapp
@@ -25,7 +24,7 @@ export default function PromoSection() {
           {/* Image 1 */}
           <div className="relative rounded-xl overflow-hidden shadow-md">
             <img
-              src="https://properti123.com/storage/listing_images/10644/NHK63oDgkg4HtdLrKWzvtBexXtH5snbAWOjmsqVL.jpeg"
+              src="/images/promo/promo-1.jpeg"
               alt="Promo 1"
               className="w-full h-full object-cover"
             />
@@ -37,7 +36,7 @@ export default function PromoSection() {
           {/* Image 2 */}
           <div className="relative rounded-xl overflow-hidden shadow-md">
             <img
-              src="https://www.jual-apartemen.com/images4/67382_3.jpg"
+              src="/images/promo/promo-2.jpeg"
               alt="Promo 2"
               className="w-full h-full object-cover"
             />

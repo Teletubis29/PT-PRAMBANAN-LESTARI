@@ -39,44 +39,7 @@
   },
 
  
-  {
-    id: 5,
-    title: "DEWI SARTIKA OFFICE",
-    address: "Jl. Dewi sartika Raya No.3131, Kel. Cawang, Jakarta Timur",
-    image: "/images/gbr/dewi-sartika.jpg",
-    soldOut: false,
-    luasTanah: "285 m2 (9.15 x 31.5 meter)",
-    luasBangunan: "755 m2 (8.8 x 17 meter)",
-    luasTanahSertifikat: "285 m2",
-    sertifikat: "Surat Hak Guna Bangunan (SHGB)",
-    sertifikatBerlaku: "23-10-2049",
-    bangunan: "5 Lantai + lantai dak",
-    dayaListrik: "50 Kva",
-    lift: "1 unit kapasitas 8 passanger",
-    fasilitasUmum: [
-      "Tiap Lantai tersedia 1 kamar mandi",
-      "1 Line Telepon (tidak termasuk PABX)",
-      "AC Cassette Daikin",
-      "Smoke Detector & APAR",
-    ],
-    facilities: [
-      { icon: "FaToilet", label: "Closet duduk TOTO" },
-      { icon: "FaTint", label: "Air Jetpump (sumur)" },
-      { icon: "FaThLarge", label: "Granit Lantai 60x60cm" },
-      { icon: "FaLayerGroup", label: "Plafond Gypsum Board" },
-    ],
-    fasilitas: [
-      "Parkir kendaraan mobil 8 unit",
-      "Parkir Motor 10 unit",
-      "Penangkal Petir",
-    ],
-    lokasi: [
-      { icon: "FaMapMarkerAlt", text: "10 MENIT GERBANG TOL CAWANG" },
-      { icon: "FaMapMarkerAlt", text: "10 MENIT TOL DALAM KOTA & JAGORAWI" },
-      { icon: "FaMapMarkerAlt", text: "15 MENIT STASIUN KALIBATA" },
-    ],
-    marketingContact: ["082-123-368-560", "081-399-825-678"],
-  },
+ 
 
   {
     id: 6,

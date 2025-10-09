@@ -138,6 +138,20 @@ const PropertyDetail = () => {
                     </div>
                   )}
 
+                  {/* For Sale Badge */}
+                  {property.forSale && (
+                    <div className="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      FOR SALE
+                    </div>
+                  )}
+
+                  {/* Sold Out Badge */}
+                  {property.soldOut && (
+                    <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      SOLD OUT
+                    </div>
+                  )}
+
                   {/* Dots Indicator */}
                   {images.length > 1 && (
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
@@ -189,7 +203,7 @@ const PropertyDetail = () => {
                 Detail Properti
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-8">
                 {/* Spesifikasi */}
                 <div>
                   <h3 className="text-lg font-semibold text-orange-500 mb-4">
@@ -248,6 +262,66 @@ const PropertyDetail = () => {
                         </span>
                       </div>
                     )}
+                    {property.lift && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Lift:</span>
+                        <span className="font-medium">{property.lift}</span>
+                      </div>
+                    )}
+                    {property.telekomunikasi && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Telekomunikasi:</span>
+                        <span className="font-medium">{property.telekomunikasi}</span>
+                      </div>
+                    )}
+                    {property.ac && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">AC:</span>
+                        <span className="font-medium">{property.ac}</span>
+                      </div>
+                    )}
+                    {property.fireSystem && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Fire System:</span>
+                        <span className="font-medium">{property.fireSystem}</span>
+                      </div>
+                    )}
+                    {property.kamarMandi && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Kamar Mandi:</span>
+                        <span className="font-medium">{property.kamarMandi}</span>
+                      </div>
+                    )}
+                    {property.sanitary && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Sanitary:</span>
+                        <span className="font-medium">{property.sanitary}</span>
+                      </div>
+                    )}
+                    {property.air && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Air:</span>
+                        <span className="font-medium">{property.air}</span>
+                      </div>
+                    )}
+                    {property.lantai && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Lantai:</span>
+                        <span className="font-medium">{property.lantai}</span>
+                      </div>
+                    )}
+                    {property.plafon && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Plafon:</span>
+                        <span className="font-medium">{property.plafon}</span>
+                      </div>
+                    )}
+                    {property.aksesJalan && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Akses Jalan:</span>
+                        <span className="font-medium">{property.aksesJalan}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -280,6 +354,46 @@ const PropertyDetail = () => {
                 </div>
               </div>
             </div>
+
+            {/* Detail Lantai */}
+            {property.detailLantai && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                  Detail Lantai
+                </h2>
+                <ul className="space-y-2">
+                  {property.detailLantai.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <FaIcons.FaBuilding
+                        className="text-orange-500 mt-1 flex-shrink-0"
+                        size={16}
+                      />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Fasilitas Tambahan (selain facilities) */}
+            {property.fasilitas && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                  Fasilitas Tambahan
+                </h2>
+                <ul className="space-y-2">
+                  {property.fasilitas.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <FaIcons.FaPlus
+                        className="text-blue-500 mt-1 flex-shrink-0"
+                        size={16}
+                      />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Facilities */}
             {property.facilities && (
@@ -345,7 +459,7 @@ const PropertyDetail = () => {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Contact Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 mb-6 sticky top-6 z-10 h-fit">
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-6 h-fit">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 Hubungi Kami
               </h3>
@@ -385,6 +499,50 @@ const PropertyDetail = () => {
                 </button>
               </div>
             </div>
+
+            {/* Additional Note */}
+            {property.additionalNote && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-8">
+                <h3 className="text-lg font-semibold text-yellow-800 mb-3">
+                  <FaIcons.FaExclamationTriangle className="inline mr-2" />
+                  Catatan Penting
+                </h3>
+                <p className="text-yellow-700 text-sm italic">
+                  {property.additionalNote}
+                </p>
+              </div>
+            )}
+
+            {/* Google Maps Link */}
+            {property.googleMapsLink && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                  Lokasi di Peta
+                </h2>
+                <a
+                  href={property.googleMapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-blue-500 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-600 transition"
+                >
+                  <FaIcons.FaMapMarkerAlt size={20} />
+                  Lihat di Google Maps
+                </a>
+              </div>
+            )}
+
+            {/* Disclaimer */}
+            {property.disclaimer && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-8">
+                <h3 className="text-lg font-semibold text-yellow-800 mb-3">
+                  <FaIcons.FaExclamationTriangle className="inline mr-2" />
+                  Disclaimer
+                </h3>
+                <p className="text-yellow-700 text-sm italic">
+                  {property.disclaimer}
+                </p>
+              </div>
+            )}
 
             {/* Quick Info */}
             <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">

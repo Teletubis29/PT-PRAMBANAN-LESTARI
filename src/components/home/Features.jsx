@@ -63,7 +63,13 @@ export default function FeaturedProperties() {
       `}</style>
           {properties.map((property) => (
             <SwiperSlide key={property.id} className="h-full">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col min-h-[540px] max-h-[600px] justify-between">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col min-h-[540px] max-h-[600px] justify-between relative">
+                {/* For Sale Badge */}
+                {property.forSale && (
+                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10 shadow-lg">
+                    FOR SALE
+                  </div>
+                )}
                 <img
                   src={property.image}
                   alt={property.title}

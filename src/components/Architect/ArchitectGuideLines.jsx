@@ -10,8 +10,8 @@ export default function ArchitectGuidelines() {
             {/* Left Side - Image */}
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-                alt="Pekerja konstruksi"
+                src="/images/gbr/experience2.jpg"
+                alt="Proyek konstruksi bangunan"
                 className="w-full h-full min-h-[500px] object-cover"
               />
             </div>

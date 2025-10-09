@@ -8,29 +8,29 @@ const sectionData = [
     bg: "bg-white",
     images: ["/images/gbr/proyek-baru-gedung.jpg"],
   },
-  {
-    title: "Residentials",
-    subtitle: "Projek baru",
-    desc: "Masa depan hunian idaman dimulai sekarang, dengan proyek Residential yang akan menjadi tempat terbaik bagi Anda bersama keluarga.  Kami siap membangun impian Anda. Rumah memiliki ragam model, kontemporer hingga kolonial, kadang memiliki dua atau lebih gaya sekaligus. Prinsip utamanya adalah aman, nyaman dan fungsional.",
-    bg: "bg-gray-300",
-    images: [
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80",
-    ],
-  },
-  {
-    title: "Commercials",
-    subtitle: "Projek baru",
-    desc: "Perkantoran adalah tempat peluang untuk merintis dari usaha yang di bangun agar menjadi lebih maju dan besar. Karena setiap ide bisnis layak punya tempat terbaik. Kami hadir dengan proyek komersial yang dirancang untuk mendukung setiap ambisi, mengubah visi Anda menjadi kenyataan. Dengan inovasi desain kekinian menjadikan kantor yang bergengsi.",
-    bg: "bg-white",
-    images: [
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
-    ],
-  },
+  // {
+  //   title: "Residentials",
+  //   subtitle: "Projek baru",
+  //   desc: "Masa depan hunian idaman dimulai sekarang, dengan proyek Residential yang akan menjadi tempat terbaik bagi Anda bersama keluarga.  Kami siap membangun impian Anda. Rumah memiliki ragam model, kontemporer hingga kolonial, kadang memiliki dua atau lebih gaya sekaligus. Prinsip utamanya adalah aman, nyaman dan fungsional.",
+  //   bg: "bg-gray-300",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80",
+  //   ],
+  // },
+  // {
+  //   title: "Commercials",
+  //   subtitle: "Projek baru",
+  //   desc: "Perkantoran adalah tempat peluang untuk merintis dari usaha yang di bangun agar menjadi lebih maju dan besar. Karena setiap ide bisnis layak punya tempat terbaik. Kami hadir dengan proyek komersial yang dirancang untuk mendukung setiap ambisi, mengubah visi Anda menjadi kenyataan. Dengan inovasi desain kekinian menjadikan kantor yang bergengsi.",
+  //   bg: "bg-white",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+  //   ],
+  // },
 ];
 
 const SectionSale = () => {
   return (
-    <div className="w-full -mt-16 md:-mt-32">
+    <div className="w-full mt-16 md:mt-32">
       <hr className="border-t border-gray-300" />
 
       {sectionData.map((section, idx) => (
