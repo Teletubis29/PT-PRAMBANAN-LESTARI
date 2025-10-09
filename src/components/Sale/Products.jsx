@@ -42,10 +42,10 @@ const Products = () => {
                 <div className="relative">
                   <img src={product.image} alt={product.title} className="w-full h-72 max-h-60 object-contain bg-white" />
                   {product.soldOut && (
-                    <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">SOLD OUT</span>
+                    <span className="absolute top-2 right-2 bg-gray-600 text-white text-xs font-bold px-2 py-1 rounded">SOLD OUT</span>
                   )}
                   {product.forSale && !product.soldOut && (
-                    <span className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">FOR SALE</span>
+                    <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">FOR SALE</span>
                   )}
                 </div>
                 <div className="p-6 flex flex-col flex-1 h-full">

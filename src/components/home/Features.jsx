@@ -70,6 +70,12 @@ export default function FeaturedProperties() {
                     FOR SALE
                   </div>
                 )}
+                {/* Sold Out Badge */}
+                {property.soldOut && (
+                  <div className="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10 shadow-lg">
+                    SOLD OUT
+                  </div>
+                )}
                 <img
                   src={property.image}
                   alt={property.title}
