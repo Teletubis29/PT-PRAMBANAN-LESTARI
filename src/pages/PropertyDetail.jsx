@@ -376,7 +376,7 @@ const PropertyDetail = () => {
             )}
 
             {/* Fasilitas Tambahan (selain facilities) */}
-            {property.fasilitas && (
+            {property.fasilitas && property.fasilitas.length > 0 && (
               <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
                   Fasilitas Tambahan
@@ -396,7 +396,7 @@ const PropertyDetail = () => {
             )}
 
             {/* Facilities */}
-            {property.facilities && (
+            {property.facilities && property.facilities.length > 0 && (
               <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
                   Fasilitas
@@ -416,7 +416,7 @@ const PropertyDetail = () => {
             )}
 
             {/* Fasilitas Umum */}
-            {property.fasilitasUmum && (
+            {property.fasilitasUmum && property.fasilitasUmum.length > 0 && (
               <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
                   Fasilitas Umum
