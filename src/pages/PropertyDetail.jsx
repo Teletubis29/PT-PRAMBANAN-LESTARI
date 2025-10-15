@@ -13,6 +13,11 @@ const PropertyDetail = () => {
   // Membuat array gambar - jika ada multiple images gunakan itu, jika tidak gunakan image utama
   const images = property?.images || [property?.image];
 
+  // Helper untuk mendeteksi apakah file adalah video
+  const isVideo = (fileName) => {
+    return fileName && (fileName.includes('.mp4') || fileName.includes('.webm') || fileName.includes('.ogg'));
+  };
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
@@ -105,13 +110,26 @@ const PropertyDetail = () => {
             {/* Image Gallery Slider */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
               <div className="relative">
-                {/* Main Image */}
+                {/* Main Image/Video */}
                 <div className="relative h-64 md:h-[570px] overflow-hidden">
-                  <img
-                    src={images[currentImageIndex]}
-                    alt={`${property.title} - ${currentImageIndex + 1}`}
-                    className="w-full h-full object-contain bg-gray-100 transition-transform duration-300"
-                  />
+                  {isVideo(images[currentImageIndex]) ? (
+                    <video
+                      src={images[currentImageIndex]}
+                      className="w-full h-full object-contain bg-gray-100"
+                      controls
+                      autoPlay
+                      muted
+                      loop
+                    >
+                      <p>Browser Anda tidak mendukung video HTML5.</p>
+                    </video>
+                  ) : (
+                    <img
+                      src={images[currentImageIndex]}
+                      alt={`${property.title} - ${currentImageIndex + 1}`}
+                      className="w-full h-full object-contain bg-gray-100 transition-transform duration-300"
+                    />
+                  )}
                   
                   {/* Navigation Arrows - Only show if more than 1 image */}
                   {images.length > 1 && (
@@ -178,17 +196,31 @@ const PropertyDetail = () => {
                         <button
                           key={index}
                           onClick={() => goToImage(index)}
-                          className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                          className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 relative ${
                             currentImageIndex === index
                               ? 'border-orange-500 opacity-100'
                               : 'border-gray-200 opacity-70 hover:opacity-100'
                           }`}
                         >
-                          <img
-                            src={image}
-                            alt={`Thumbnail ${index + 1}`}
-                            className="w-full h-full object-cover"
-                          />
+                          {isVideo(image) ? (
+                            <>
+                              <video
+                                src={image}
+                                className="w-full h-full object-cover"
+                                muted
+                              />
+                              {/* Video Play Icon Overlay */}
+                              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                                <FaIcons.FaPlay className="text-white text-xs" />
+                              </div>
+                            </>
+                          ) : (
+                            <img
+                              src={image}
+                              alt={`Thumbnail ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          )}
                         </button>
                       ))}
                     </div>

@@ -1,13 +1,28 @@
-import { FaCheckCircle, FaPlayCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 export default function TrustAbout() {
   return (
     <section className="bg-gray-200 py-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-0">
-        {/* Kiri: Video Dummy */}
+        {/* Kiri: Video */}
         <div className="flex justify-center">
-          <div className="bg-white border border-gray-400 w-full max-w-xl aspect-video flex items-center justify-center">
-            <FaPlayCircle size={90} className="text-gray-400" />
+          <div className="w-full max-w-xl aspect-video rounded-lg overflow-hidden shadow-lg">
+            <video 
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            >
+              <source src="/videos/MITRA.mp4" type="video/mp4" />
+              <p className="text-gray-500 text-center p-4">
+                Browser Anda tidak mendukung video HTML5. 
+                <a href="/videos/MITRA.mp4" className="text-orange-500 underline">
+                  Download video
+                </a>
+              </p>
+            </video>
           </div>
         </div>
         {/* Kanan: Judul, deskripsi, checklist */}

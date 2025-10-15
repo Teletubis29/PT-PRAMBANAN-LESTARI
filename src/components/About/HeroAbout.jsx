@@ -9,7 +9,7 @@ export default function HeroAbout() {
   }, []);
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden flex items-center">
+    <section className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden flex items-center">
       {/* Gambar full, proporsional, tajam */}
       <img
         src="/images/banners/header-tentang-kami.jpg"

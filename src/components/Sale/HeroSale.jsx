@@ -10,7 +10,7 @@ export default function HeroAbout() {
 
   return (
     <section
-      className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-start bg-cover bg-center"
+      className="relative w-full h-[60vh] md:h-[90vh] flex items-center justify-start bg-cover bg-center"
       style={{
         backgroundImage: 'url("/images/banners/header-properti1.jpg")'
       }}

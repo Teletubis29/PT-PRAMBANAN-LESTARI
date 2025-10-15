@@ -1,20 +1,17 @@
+import ExperienceSection from "../components/Experience/ExperienceSection";
 import Categories from "../components/home/Categories";
-import HeroGallery from "../components/Gallery/HeroGallery";
-import GallerySection from "../components/Gallery/GallerySection";
-import GalleryContent from "../components/Gallery/GalleryContent";
 import PortfolioSlider from "../components/Gallery/PortfolioSlider";
-// import HeroExperience from "../components/Experience/HeroExperience";
-// import IntroExperience from "../components/Experience/IntroExperience";
-// import PackageServices from "../components/Experience/PackageServices";
+import HeroExperience from "../components/Experience/HeroExperience";
+import ExperienceContent from "../components/Experience/ExperienceContent";
+
 
 export default function Experience() {
   return (
     <div>
-      {/* <HeroExperience /> */}
-      <HeroGallery />
+      <HeroExperience />
       <Categories />
-      <GallerySection />
-      <GalleryContent />
+      <ExperienceSection />
+      <ExperienceContent/>
       <PortfolioSlider />
 
       {/* <PackageServices />  */}

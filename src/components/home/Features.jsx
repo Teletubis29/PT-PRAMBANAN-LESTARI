@@ -16,6 +16,7 @@ export default function FeaturedProperties() {
   // Handler untuk navigasi ke detail
   const handleViewProperty = (propertyId) => {
     navigate(`/properti/${propertyId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   // Helper untuk render icon dari string
   const getIconComponent = (iconName) => {

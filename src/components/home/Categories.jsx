@@ -35,10 +35,22 @@ const Categories = () => {
                 }, 100);
               } else if (item.label === "Jasa Arsitektur") {
                 navigate("/jasa-arsitektur");
+                // Scroll ke paling atas setelah navigasi
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
               } else if (item.label === "Jasa Interior") {
-                navigate("/jasa-interior");
+                navigate("/interiors");
+                // Scroll ke paling atas setelah navigasi
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
               } else if (item.label === "Our Experience") {
                 navigate("/our-experience");
+                // Scroll ke paling atas setelah navigasi
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
               }
             }}
           >

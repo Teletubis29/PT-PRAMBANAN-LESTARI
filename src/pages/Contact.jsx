@@ -116,7 +116,7 @@ const Contact = () => {
   };
   return (
     <section className="min-h-[70vh] w-full bg-slate-50">
-        <div className="relative w-full h-[60vh] md:h-[70vh]">
+        <div className="relative w-full h-[60vh] md:h-[90vh]">
           <img
             src={kontakBanner}
             alt="Banner Kontak"

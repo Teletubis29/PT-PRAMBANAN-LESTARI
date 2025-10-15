@@ -3,7 +3,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Sale from "./pages/Sale";
-import Gallery from "./pages/Gallery";
+// import Gallery from "./pages/Gallery";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Pembayaran from "./pages/Pembayaran";
@@ -12,6 +12,7 @@ import PackageArchitect from "./components/Pembayaran/PackageArchitect";
 import PackageInterior from "./components/Pembayaran/PackageInterior";
 import PackageConstruction from "./components/Pembayaran/PackageConstruction";
 import Architect from "./pages/Architect";
+import Interiors from "./pages/interiors";
 
 function App() {
   return (
@@ -80,7 +81,7 @@ function App() {
             </Layout>
           }
         />
-          <Route
+        <Route
           path="/pembayaran/jasa-interior"
           element={
             <Layout>
@@ -88,7 +89,7 @@ function App() {
             </Layout>
           }
         />
-             <Route
+        <Route
           path="/pembayaran/jasa-konstruksi"
           element={
             <Layout>
@@ -96,15 +97,15 @@ function App() {
             </Layout>
           }
         />
-        {/* <Route
-          path="/galeri"
+        <Route
+          path="/interiors"
           element={
             <Layout>
-              <Gallery />
+              <Interiors />
             </Layout>
           }
-        /> */}
-          <Route
+        />
+        <Route
           path="/our-experience"
           element={
             <Layout>

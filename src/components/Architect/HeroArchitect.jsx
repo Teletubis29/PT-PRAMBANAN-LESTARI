@@ -9,7 +9,7 @@ export default function HeroArchitect() {
   }, []);
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden flex items-center">
+    <section className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden flex items-center">
       <img
         src="/images/gbr/our-experience1.jpeg"
         alt="Our Experience"
