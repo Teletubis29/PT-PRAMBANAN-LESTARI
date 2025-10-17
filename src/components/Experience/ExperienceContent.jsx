@@ -248,7 +248,7 @@ const ExperienceContent = () => {
                   </h3>
 
                   {/* Check if all property data is missing */}
-                  {(!property.address && !property.luasTanahSertifikat && !property.luasBangunan && !property.bangunan) ? (
+                  {(!property.address && !property.luasTanah && !property.luasBangunan && !property.typeBuilding) ? (
                     /* Show only professional message when all data is missing */
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-400 p-4 mb-4 rounded-r-lg">
                       <div className="flex items-start">
@@ -279,13 +279,13 @@ const ExperienceContent = () => {
                       )}
 
                       {/* Property Details - only show if any data exists */}
-                      {(property.luasTanahSertifikat || property.luasBangunan || property.bangunan) && (
+                      {(property.luasTanah || property.luasBangunan || property.typeBuilding) && (
                         <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                          {property.luasTanahSertifikat && (
+                          {property.luasTanah && (
                             <div className="flex items-center">
                               <FaRulerCombined className="w-4 h-4 mr-2 text-green-500" />
-                              <span className="text-slate-600" title={`LT: ${property.luasTanahSertifikat}`}>
-                                LT: {truncateText(property.luasTanahSertifikat, 15)}
+                              <span className="text-slate-600" title={`LT: ${property.luasTanah}`}>
+                                LT: {truncateText(property.luasTanah, 15)}
                               </span>
                             </div>
                           )}
@@ -297,11 +297,11 @@ const ExperienceContent = () => {
                               </span>
                             </div>
                           )}
-                          {property.bangunan && (
+                          {property.typeBuilding && (
                             <div className="flex items-center col-span-2">
                               <FaBuilding className="w-4 h-4 mr-2 text-purple-500" />
-                              <span className="text-slate-600" title={property.bangunan}>
-                                {truncateText(property.bangunan, 20)}
+                              <span className="text-slate-600" title={property.typeBuilding}>
+                                {truncateText(property.typeBuilding, 20)}
                               </span>
                             </div>
                           )}
@@ -311,9 +311,9 @@ const ExperienceContent = () => {
                   )}
 
                   {/* Show "Lihat Detail" button if any text is truncated */}
-                  {(isTextTruncated(property.luasTanahSertifikat, 15) || 
+                  {(isTextTruncated(property.luasTanah, 15) || 
                     isTextTruncated(property.luasBangunan, 15) || 
-                    isTextTruncated(property.bangunan, 20) ||
+                    isTextTruncated(property.typeBuilding, 20) ||
                     isTextTruncated(property.address, 40)) && (
                     <div className="mb-4">
                       <button
@@ -562,7 +562,7 @@ const ExperienceContent = () => {
                       <div>
                         <p className="font-medium text-slate-800">Luas Tanah</p>
                         <p className="text-slate-600">
-                          {selectedProject.luasTanahSertifikat || "-"}
+                          {selectedProject.luasTanah || "-"}
                         </p>
                       </div>
                     </div>
@@ -583,10 +583,10 @@ const ExperienceContent = () => {
                       <FaBuilding className="w-5 h-5 mr-3 text-purple-500" />
                       <div>
                         <p className="font-medium text-slate-800">
-                          Jumlah Lantai
+                          Tipe Bangunan
                         </p>
                         <p className="text-slate-600">
-                          {selectedProject.bangunan || "-"}
+                          {selectedProject.typeBuilding || "-"}
                         </p>
                       </div>
                     </div>
