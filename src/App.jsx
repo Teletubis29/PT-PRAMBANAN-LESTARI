@@ -6,13 +6,10 @@ import Sale from "./pages/Sale";
 // import Gallery from "./pages/Gallery";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
-import Pembayaran from "./pages/Pembayaran";
 import PropertyDetail from "./pages/PropertyDetail";
-import PackageArchitect from "./components/Pembayaran/PackageArchitect";
-import PackageInterior from "./components/Pembayaran/PackageInterior";
-import PackageConstruction from "./components/Pembayaran/PackageConstruction";
-import Architect from "./pages/Architect";
+import Architect from "./pages/architect";
 import Interiors from "./pages/interiors";
+
 
 function App() {
   return (
@@ -65,15 +62,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/pembayaran"
-          element={
-            <Layout>
-              <Pembayaran />
-            </Layout>
-          }
-        />
-        <Route
+          <Route
           path="/jasa-arsitektur"
           element={
             <Layout>
@@ -81,22 +70,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/pembayaran/jasa-interior"
-          element={
-            <Layout>
-              <PackageInterior />
-            </Layout>
-          }
-        />
-        <Route
-          path="/pembayaran/jasa-konstruksi"
-          element={
-            <Layout>
-              <PackageConstruction />
-            </Layout>
-          }
-        />
+
         <Route
           path="/interiors"
           element={

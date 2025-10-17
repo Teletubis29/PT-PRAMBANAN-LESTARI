@@ -13,14 +13,13 @@ export default function Navbar() {
   const handleNavigation = (path) => {
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMenuOpen(false); // Close mobile menu after navigation
+    setIsMenuOpen(false);
   };
 
   const menuItems = [
     { name: "BERANDA", path: "/" },
     { name: "TENTANG KAMI", path: "/tentang-kami" },
     { name: "PROPERTI", path: "/properti" },
-    { name: "PEMBAYARAN", path: "/pembayaran" },
     { name: "KONTAK", path: "/kontak" },
   ];
 

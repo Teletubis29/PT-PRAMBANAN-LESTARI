@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import productsData from "../../data/productsData";
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const pageSize = 8;
 
 const Products = () => {
   const navigate = useNavigate();
-  const [page, setPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   
   // Filter hanya property dengan kategori "office"
   const officeProperties = productsData.filter(property => {
@@ -18,8 +19,8 @@ const Products = () => {
   
   const totalPages = Math.ceil(officeProperties.length / pageSize);
   const pagedProducts = officeProperties.slice(
-    (page - 1) * pageSize,
-    page * pageSize
+    currentPage * pageSize,
+    (currentPage + 1) * pageSize
   );
 
   // Handler untuk navigasi ke detail
@@ -29,7 +30,7 @@ const Products = () => {
   };
 
   const handlePageChange = (newPage) => {
-    setPage(newPage);
+    setCurrentPage(newPage);
     const productsSection = document.getElementById('products-section');
     if (productsSection) {
       productsSection.scrollIntoView({ 
@@ -37,6 +38,36 @@ const Products = () => {
         block: 'start' 
       });
     }
+  };
+
+  const getPaginationPages = () => {
+    const delta = 2;
+    const range = [];
+    const rangeWithDots = [];
+
+    for (
+      let i = Math.max(0, currentPage - delta);
+      i <= Math.min(totalPages - 1, currentPage + delta);
+      i++
+    ) {
+      range.push(i);
+    }
+
+    if (range[0] > 1) {
+      rangeWithDots.push(0, "...");
+    } else if (range[0] === 1) {
+      rangeWithDots.push(0);
+    }
+
+    rangeWithDots.push(...range);
+
+    if (range[range.length - 1] < totalPages - 2) {
+      rangeWithDots.push("...", totalPages - 1);
+    } else if (range[range.length - 1] === totalPages - 2) {
+      rangeWithDots.push(totalPages - 1);
+    }
+
+    return rangeWithDots;
   };
 
   return (
@@ -124,22 +155,96 @@ const Products = () => {
             );
           })}
         </div>
-        {/* Pagination */}
-        <div className="flex justify-center items-center gap-2 mt-12">
-          {Array.from({ length: totalPages }, (_, i) => (
-            <button
-              key={i}
-              onClick={() => handlePageChange(i + 1)}
-              className={`w-7 h-7 rounded text-sm font-bold border border-gray-300 flex items-center justify-center ${
-                page === i + 1
-                  ? "bg-gray-400 text-white"
-                  : "bg-white text-gray-500 hover:bg-gray-200"
-              }`}
-            >
-              {i + 1}
-            </button>
-          ))}
-        </div>
+        {/* Professional Pagination */}
+        {totalPages > 1 && (
+          <div className="flex flex-col items-center gap-6 my-14 pt-5">
+            {/* Pagination Info */}
+            <div className="text-sm text-slate-600 font-medium">
+              Menampilkan {currentPage * pageSize + 1} -{" "}
+              {Math.min(
+                (currentPage + 1) * pageSize,
+                officeProperties.length
+              )}{" "}
+              dari {officeProperties.length} properti
+            </div>
+
+            {/* Pagination Controls */}
+            <div className="flex items-center gap-3">
+              {/* Previous Page */}
+              <button
+                onClick={() => handlePageChange(Math.max(0, currentPage - 1))}
+                disabled={currentPage === 0}
+                className="flex items-center justify-center w-10 h-10 rounded-xl bg-white border-2 border-slate-200 text-slate-700 hover:border-orange-400 hover:text-orange-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md"
+                title="Halaman Sebelumnya"
+              >
+                <FaChevronLeft className="w-3 h-3" />
+              </button>
+
+              {/* Page Numbers */}
+              <div className="flex items-center gap-2">
+                {getPaginationPages().map((page, idx) => {
+                  if (page === "...") {
+                    return (
+                      <span
+                        key={`dots-${idx}`}
+                        className="px-3 py-2 text-slate-400 font-medium"
+                      >
+                        ...
+                      </span>
+                    );
+                  }
+
+                  const isActive = currentPage === page;
+                  return (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`w-12 h-12 rounded-xl font-semibold transition-all duration-200 shadow-sm ${
+                        isActive
+                          ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg transform scale-105 border-2 border-orange-500"
+                          : "bg-white border-2 border-slate-200 text-slate-700 hover:border-orange-400 hover:text-orange-600 hover:shadow-md hover:transform hover:scale-105"
+                      }`}
+                    >
+                      {page + 1}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Next Page */}
+              <button
+                onClick={() =>
+                  handlePageChange(Math.min(totalPages - 1, currentPage + 1))
+                }
+                disabled={currentPage === totalPages - 1}
+                className="flex items-center justify-center w-10 h-10 rounded-xl bg-white border-2 border-slate-200 text-slate-700 hover:border-orange-400 hover:text-orange-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md"
+                title="Halaman Selanjutnya"
+              >
+                <FaChevronRight className="w-3 h-3" />
+              </button>
+            </div>
+
+            {/* Quick Jump (if many pages) */}
+            {totalPages > 5 && (
+              <div className="flex items-center gap-3 text-sm">
+                <span className="text-slate-600 font-medium">
+                  Lompat ke halaman:
+                </span>
+                <select
+                  value={currentPage}
+                  onChange={(e) => handlePageChange(parseInt(e.target.value))}
+                  className="px-3 py-2 rounded-lg border-2 border-slate-200 text-slate-700 focus:border-orange-400 focus:outline-none transition-colors bg-white shadow-sm"
+                >
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <option key={i} value={i}>
+                      Halaman {i + 1}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

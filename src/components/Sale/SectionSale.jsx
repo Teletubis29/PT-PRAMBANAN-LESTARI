@@ -30,7 +30,7 @@ const sectionData = [
 
 const SectionSale = () => {
   return (
-    <div className="w-full mt-16 md:mt-14">
+    <div className="w-full mt-16 md:mt-1">
       <hr className="border-t border-gray-300" />
 
       {sectionData.map((section, idx) => (
