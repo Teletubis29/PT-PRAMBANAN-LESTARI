@@ -24,7 +24,7 @@ export default function HeroArchitect() {
             animate ? "opacity-100 translate-x-0" : "opacity-0 translate-x-32"
           }`}
         >
-          Dari Konsep Hingga Kenyamanan — Kami Design Interior untuk Anda
+          Dari Konsep Hingga Kenyamanan — Kami Hadirkan Properti Untuk Anda
         </h1>
       </div>
     </section>

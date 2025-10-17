@@ -42,9 +42,23 @@ const ExperienceContent = () => {
   const categories = ["All", "Galeries Residential", "Galeries Commercials"];
 
   const filteredProjects = selectedCategory === "All" 
+    ? productsData
+        .filter(property => {
+          const category = property.category ? property.category.toLowerCase() : "office";
+          return category === "office" || category === "residential" || category === "commercial";
+        })
+        .sort((a, b) => {
+          const categoryA = a.category ? a.category.toLowerCase() : "office";
+          const categoryB = b.category ? b.category.toLowerCase() : "office";
+          
+          // Office first, then residential, then commercial
+          const order = { office: 1, residential: 2, commercial: 3 };
+          return order[categoryA] - order[categoryB];
+        })
+    : selectedCategory === "Galeries Commercials"
     ? productsData.filter(property => {
         const category = property.category ? property.category.toLowerCase() : "office";
-        return category === "office" || category === "residential" || category === "commercial";
+        return category === "office";
       })
     : productsData.filter((property) => {
         const categoryDisplayName = getCategoryDisplayName(property.category);
@@ -233,35 +247,68 @@ const ExperienceContent = () => {
                     {property.title}
                   </h3>
 
-                  {/* Location */}
-                  <div className="flex items-center text-slate-600 mb-4">
-                    <FaMapMarkerAlt className="w-4 h-4 mr-2 text-blue-500" />
-                    <span className="text-sm" title={property.address}>
-                      {truncateText(property.address, 40)}
-                    </span>
-                  </div>
+                  {/* Check if all property data is missing */}
+                  {(!property.address && !property.luasTanahSertifikat && !property.luasBangunan && !property.bangunan) ? (
+                    /* Show only professional message when all data is missing */
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-400 p-4 mb-4 rounded-r-lg">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0">
+                          <svg className="h-5 w-5 text-blue-400 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <div className="ml-3">
+                          <h4 className="text-sm font-semibold text-blue-800">Proyek Telah Selesai</h4>
+                          <p className="text-sm text-blue-700">
+                            Galeri portfolio eksklusif kami. Detail teknis dan spesifikasi tersedia melalui konsultasi langsung dengan tim arsitek.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    /* Show property details when data is available */
+                    <>
+                      {/* Location - only show if address exists */}
+                      {property.address && (
+                        <div className="flex items-center text-slate-600 mb-4">
+                          <FaMapMarkerAlt className="w-4 h-4 mr-2 text-blue-500" />
+                          <span className="text-sm" title={property.address}>
+                            {truncateText(property.address, 40)}
+                          </span>
+                        </div>
+                      )}
 
-                  {/* Property Details */}
-                  <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                    <div className="flex items-center">
-                      <FaRulerCombined className="w-4 h-4 mr-2 text-green-500" />
-                      <span className="text-slate-600" title={`LT: ${property.luasTanahSertifikat}`}>
-                        LT: {truncateText(property.luasTanahSertifikat, 15)}
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <FaBuilding className="w-4 h-4 mr-2 text-blue-500" />
-                      <span className="text-slate-600" title={`LB: ${property.luasBangunan}`}>
-                        LB: {truncateText(property.luasBangunan, 15)}
-                      </span>
-                    </div>
-                    <div className="flex items-center col-span-2">
-                      <FaBuilding className="w-4 h-4 mr-2 text-purple-500" />
-                      <span className="text-slate-600" title={property.bangunan}>
-                        {truncateText(property.bangunan, 20)}
-                      </span>
-                    </div>
-                  </div>
+                      {/* Property Details - only show if any data exists */}
+                      {(property.luasTanahSertifikat || property.luasBangunan || property.bangunan) && (
+                        <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+                          {property.luasTanahSertifikat && (
+                            <div className="flex items-center">
+                              <FaRulerCombined className="w-4 h-4 mr-2 text-green-500" />
+                              <span className="text-slate-600" title={`LT: ${property.luasTanahSertifikat}`}>
+                                LT: {truncateText(property.luasTanahSertifikat, 15)}
+                              </span>
+                            </div>
+                          )}
+                          {property.luasBangunan && (
+                            <div className="flex items-center">
+                              <FaBuilding className="w-4 h-4 mr-2 text-blue-500" />
+                              <span className="text-slate-600" title={`LB: ${property.luasBangunan}`}>
+                                LB: {truncateText(property.luasBangunan, 15)}
+                              </span>
+                            </div>
+                          )}
+                          {property.bangunan && (
+                            <div className="flex items-center col-span-2">
+                              <FaBuilding className="w-4 h-4 mr-2 text-purple-500" />
+                              <span className="text-slate-600" title={property.bangunan}>
+                                {truncateText(property.bangunan, 20)}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </>
+                  )}
 
                   {/* Show "Lihat Detail" button if any text is truncated */}
                   {(isTextTruncated(property.luasTanahSertifikat, 15) || 
@@ -505,7 +552,7 @@ const ExperienceContent = () => {
                       <div>
                         <p className="font-medium text-slate-800">Lokasi</p>
                         <p className="text-slate-600">
-                          {selectedProject.lokasi}
+                          {selectedProject.address || "-"}
                         </p>
                       </div>
                     </div>
@@ -515,7 +562,7 @@ const ExperienceContent = () => {
                       <div>
                         <p className="font-medium text-slate-800">Luas Tanah</p>
                         <p className="text-slate-600">
-                          {selectedProject.luasTanah}
+                          {selectedProject.luasTanahSertifikat || "-"}
                         </p>
                       </div>
                     </div>
@@ -527,7 +574,7 @@ const ExperienceContent = () => {
                           Luas Bangunan
                         </p>
                         <p className="text-slate-600">
-                          {selectedProject.luasBangunan}
+                          {selectedProject.luasBangunan || "-"}
                         </p>
                       </div>
                     </div>
@@ -539,55 +586,11 @@ const ExperienceContent = () => {
                           Jumlah Lantai
                         </p>
                         <p className="text-slate-600">
-                          {selectedProject.bangunan} Lantai
+                          {selectedProject.bangunan || "-"}
                         </p>
                       </div>
                     </div>
                   </div>
-
-                  {/* Additional Details */}
-                  {selectedProject.kamarTidur && (
-                    <div className="border-t pt-4">
-                      <h3 className="font-semibold text-slate-800 mb-3">
-                        Detail Properti
-                      </h3>
-                      <div className="grid grid-cols-2 gap-3 text-sm">
-                        <div>
-                          <p className="text-slate-600">Kamar Tidur</p>
-                          <p className="font-medium">
-                            {selectedProject.kamarTidur}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-slate-600">Kamar Mandi</p>
-                          <p className="font-medium">
-                            {selectedProject.kamarMandi}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-slate-600">Carport</p>
-                          <p className="font-medium">
-                            {selectedProject.carport}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-slate-600">Listrik</p>
-                          <p className="font-medium">
-                            {selectedProject.listrik}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Disclaimer */}
-                  {selectedProject.disclaimer && (
-                    <div className="border-t pt-4 mt-4">
-                      <p className="text-xs text-slate-500 italic">
-                        {selectedProject.disclaimer}
-                      </p>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>

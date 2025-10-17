@@ -26,7 +26,7 @@ const InteriorServices = () => {
               {/* Gambar pertama (pojok kiri atas) */}
               <div className="absolute -top-4  -translate-x-1/2 z-10  rounded-2xl overflow-hidden shadow-lg w-72 h-96 mt-8">
                 <img
-                  src="https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880"
+                  src="/images/gbr/K1-JASA-INTERIOR-DEPAN.jpg"
                   alt="Living Room"
                   className="w-full h-full object-cover"
                 />
@@ -35,12 +35,12 @@ const InteriorServices = () => {
               {/* Gambar kedua (kanan bawah) */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg w-72 h-96 ml-48 mt-40">
                 <img
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80"
+                  src="/images/gbr/K2-JASA-INTERIOR-BELAKANG.jpg"
                   alt="Dining Room"
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </div>  
 
             {/* Right Side - Content */}
             <div className="space-y-6">

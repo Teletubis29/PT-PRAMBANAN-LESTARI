@@ -9,8 +9,15 @@ const pageSize = 8;
 const Products = () => {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(productsData.length / pageSize);
-  const pagedProducts = productsData.slice(
+  
+  // Filter hanya property dengan kategori "office"
+  const officeProperties = productsData.filter(property => {
+    const category = property.category ? property.category.toLowerCase() : "office";
+    return category === "office";
+  });
+  
+  const totalPages = Math.ceil(officeProperties.length / pageSize);
+  const pagedProducts = officeProperties.slice(
     (page - 1) * pageSize,
     page * pageSize
   );

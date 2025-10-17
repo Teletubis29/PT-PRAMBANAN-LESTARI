@@ -16,7 +16,7 @@ const HeroExperience = () => {
   }, []);
 
   return (
-    <section className="bg-gray-400 min-h-[600px] flex items-center justify-center py-12">
+    <section className="bg-gray-400 h-[60vh] md:h-[90vh] flex items-center justify-center py-12">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center md:items-stretch gap-8 px-4">
         {/* Kiri: Teks */}
         <div className="flex-1 flex flex-col justify-center text-left text-white max-w-xl">

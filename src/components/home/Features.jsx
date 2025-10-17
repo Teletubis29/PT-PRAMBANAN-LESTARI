@@ -10,8 +10,11 @@ import productsData from "../../data/productsData";
 export default function FeaturedProperties() {
   const navigate = useNavigate();
 
-  // Ambil semua property dari productsData
-  const properties = productsData;
+  // Filter hanya property dengan kategori "office"
+  const properties = productsData.filter(property => {
+    const category = property.category ? property.category.toLowerCase() : "office";
+    return category === "office";
+  });
 
   // Handler untuk navigasi ke detail
   const handleViewProperty = (propertyId) => {
