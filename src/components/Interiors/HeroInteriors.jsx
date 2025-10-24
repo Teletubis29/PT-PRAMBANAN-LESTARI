@@ -25,7 +25,7 @@ export default function HeroAbout() {
             animate ? "opacity-100 translate-x-0" : "opacity-0 translate-x-32"
           }`}
         >
-          Percayakan kami untuk Jasa pekerjaan Design Interiormu?
+          Percayakan kami untuk Jasa pekerjaan Interior anda
         </h1>
       </div>
     </section>

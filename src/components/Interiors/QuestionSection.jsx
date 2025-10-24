@@ -2,11 +2,10 @@ import React from "react";
 
 const QuestionSection = () => {
   const questions = [
-    "Ingin membuat design interior office, rumah, dan komersial tetapi tidak tahu harus kemana?",
-    "Ingin merancang design interior office, rumah dan komersial tetapi masih bingung memilih model dan tema yang cocok?",
-    "Ingin merenovasi design interior office, rumah dan komersial tetapi khawatir hasil tidak sesuai ekspektasi / keinginan anda?",
-    "Ingin membangun design interior office, rumah dan komersial tetapi khawatir kualitas bahan material tidak sesuai keinginan anda?"
-  ];
+    "ingin membuat pekerjaan interior beserta designnya untuk kantor, rumah tinggal dan ruang usaha anda.",
+    " ingin merancang design interior untuk kantor , rumah tinggal dan bangunan komerrsil lainnya tetapi masih bingung moel dan thema yang cocok?",
+    "ingin mengerjakan pekerjaan interior kantor, rumah tinggal dan komersial lainnya. tetapi khawatir kulaitas bahan material tidak sesuai harapan anda."
+    ];
 
   return (
     <section className="py-16 bg-gray-100 mb-8">

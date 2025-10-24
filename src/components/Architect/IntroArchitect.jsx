@@ -2,11 +2,10 @@ import React from "react";
 
 export default function IntroArchitect() {
   const questions = [
-    "Butuh kontraktor office, rumah dan komersil tetapi tidak tahu harus kemana?",
-    "Ingin membangun office, rumah dan komersil tetapi biaya kontraktor mahal?",
-    "Ingin membuat office, rumah dan komersil tetapi kontraktor belom dapat ?",
-    "Ingin merenovasi office, rumah dan komersil tetapi khawatir hasilnya tidak sesuai ekspetasi / keinginan anda?",
-    "Ingin membangun office, rumah dan komersil tetapi khawatir kualitas konstruksi buruk dan tidak awet?"
+    " Anda butuh kontraktor untuk bangunan Kantor, Rumah tinggal, Komersil dan bangunan lainnya tetapi tidak tahu harus kemana ?",
+    " Ingin membangun bangunan Kantor, Rumah tinggal, komersil dan bangunan lainnya, Tetapi biaya jasa kontraktor mahal?",
+    " Ingin Merenovasi bangunan Kantor, Rumah tinggal, komersil dan bangunan lainnya, Tetapi Khawatir hasilnya tidak sesuai harapan dan keinginan anda?",
+    "Ingin membangun bangunan Kantor, Rumah tinggal, komersil dan bangunan lainnya, Tetapi khawatir kualitas kontruksi dan material tidak sesuai keinginan anda ?",
   ];
 
   return (
@@ -22,14 +21,14 @@ export default function IntroArchitect() {
                 alt="Construction Planning"
                 className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-30"
               />
-              
+
               {/* Overlay Content */}
               <div className="relative z-10 text-center max-w-md">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
                   Mungkin saat ini anda
                 </h3>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
-                  Tengah merasakan hal
+                  sedang merasakan hal
                 </h3>
                 <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight drop-shadow-lg">
                   seperti berikut :
