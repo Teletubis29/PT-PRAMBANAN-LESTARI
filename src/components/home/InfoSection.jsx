@@ -17,21 +17,21 @@ export default function InfoSection() {
 				</div>
 
 				{/* Kanan: Statistik */}
-				<div className="flex-1 flex flex-row gap-4 md:gap-6 justify-center w-full">
+				<div className="flex-1 flex flex-row gap-2 md:gap-6 justify-center w-full px-4 md:px-0">
 					{/* Card 1 */}
-					<div className="flex flex-col items-center justify-center rounded-2xl bg-yellow-100 w-40 h-40 md:w-48 md:h-48 p-4">
-						<span className="text-5xl md:text-6xl font-bold text-gray-700 mb-2">80+</span>
-						<span className="text-gray-700 text-base md:text-lg text-center">selected buildings</span>
+					<div className="flex flex-col items-center justify-center rounded-2xl bg-yellow-100 w-32 h-32 md:w-48 md:h-48 p-2 md:p-4">
+						<span className="text-4xl md:text-6xl font-bold text-gray-700 mb-1 md:mb-2">80+</span>
+						<span className="text-gray-700 text-xs md:text-lg text-center">selected buildings</span>
 					</div>
 					{/* Card 2 */}
-					<div className="flex flex-col items-center justify-center rounded-2xl bg-yellow-200 w-40 h-40 md:w-48 md:h-48 p-4">
-						<span className="text-5xl md:text-6xl font-bold text-gray-700 mb-2">80+</span>
-						<span className="text-gray-700 text-base md:text-lg text-center">clients have purchased</span>
+					<div className="flex flex-col items-center justify-center rounded-2xl bg-yellow-200 w-32 h-32 md:w-48 md:h-48 p-2 md:p-4">
+						<span className="text-4xl md:text-6xl font-bold text-gray-700 mb-1 md:mb-2">80+</span>
+						<span className="text-gray-700 text-xs md:text-lg text-center">clients have purchased</span>
 					</div>
 					{/* Card 3 */}
-					<div className="flex flex-col items-center justify-center rounded-2xl bg-white w-40 h-40 md:w-48 md:h-48 p-4">
-						<span className="text-5xl md:text-6xl font-bold text-gray-700 mb-2">30+</span>
-						<span className="text-gray-700 text-base md:text-lg text-center">clients have Partnership</span>
+					<div className="flex flex-col items-center justify-center rounded-2xl bg-white w-32 h-32 md:w-48 md:h-48 p-2 md:p-4">
+						<span className="text-4xl md:text-6xl font-bold text-gray-700 mb-1 md:mb-2">30+</span>
+						<span className="text-gray-700 text-xs md:text-lg text-center">clients have Partnership</span>
 					</div>
 				</div>
 			</div>

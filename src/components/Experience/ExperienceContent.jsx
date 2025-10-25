@@ -41,29 +41,38 @@ const ExperienceContent = () => {
   // Only show All, Residential, and Commercial (exclude Galeries Gedung)
   const categories = ["All", "Galeries Residential", "Galeries Commercials"];
 
-  const filteredProjects = selectedCategory === "All" 
-    ? productsData
-        .filter(property => {
-          const category = property.category ? property.category.toLowerCase() : "office";
-          return category === "office" || category === "residential" || category === "commercial";
+  const filteredProjects =
+    selectedCategory === "All"
+      ? productsData
+          .filter((property) => {
+            const category = property.category
+              ? property.category.toLowerCase()
+              : "office";
+            return (
+              category === "office" ||
+              category === "residential" ||
+              category === "commercial"
+            );
+          })
+          .sort((a, b) => {
+            const categoryA = a.category ? a.category.toLowerCase() : "office";
+            const categoryB = b.category ? b.category.toLowerCase() : "office";
+
+            // Office first, then residential, then commercial
+            const order = { office: 1, residential: 2, commercial: 3 };
+            return order[categoryA] - order[categoryB];
+          })
+      : selectedCategory === "Galeries Commercials"
+      ? productsData.filter((property) => {
+          const category = property.category
+            ? property.category.toLowerCase()
+            : "office";
+          return category === "office" || category === "commercial";
         })
-        .sort((a, b) => {
-          const categoryA = a.category ? a.category.toLowerCase() : "office";
-          const categoryB = b.category ? b.category.toLowerCase() : "office";
-          
-          // Office first, then residential, then commercial
-          const order = { office: 1, residential: 2, commercial: 3 };
-          return order[categoryA] - order[categoryB];
-        })
-    : selectedCategory === "Galeries Commercials"
-    ? productsData.filter(property => {
-        const category = property.category ? property.category.toLowerCase() : "office";
-        return category === "office";
-      })
-    : productsData.filter((property) => {
-        const categoryDisplayName = getCategoryDisplayName(property.category);
-        return categoryDisplayName === selectedCategory;
-      });
+      : productsData.filter((property) => {
+          const categoryDisplayName = getCategoryDisplayName(property.category);
+          return categoryDisplayName === selectedCategory;
+        });
 
   const itemsPerPage = 9;
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
@@ -138,7 +147,9 @@ const ExperienceContent = () => {
   // Helper untuk truncate text
   const truncateText = (text, maxLength = 30) => {
     if (!text) return "";
-    return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+    return text.length > maxLength
+      ? text.substring(0, maxLength) + "..."
+      : text;
   };
 
   // Helper untuk check if text is truncated
@@ -160,14 +171,16 @@ const ExperienceContent = () => {
 
   const nextImage = () => {
     if (selectedProject) {
-      const images = selectedProject.experienceImages || selectedProject.images || [selectedProject.image];
+      const images = selectedProject.experienceImages ||
+        selectedProject.images || [selectedProject.image];
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }
   };
 
   const prevImage = () => {
     if (selectedProject) {
-      const images = selectedProject.experienceImages || selectedProject.images || [selectedProject.image];
+      const images = selectedProject.experienceImages ||
+        selectedProject.images || [selectedProject.image];
       setCurrentImageIndex(
         (prev) => (prev - 1 + images.length) % images.length
       );
@@ -176,18 +189,57 @@ const ExperienceContent = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-16 font-poppins max-w-7xl">
+      <div className="container mx-auto py-2 md:py-8 font-poppins max-w-8xl">
         {/* Category Filter */}
-        <div className="category-filter-section flex justify-center space-x-4 -mt-20 mb-16">
+        <style>{`
+          .category-filter-section::-webkit-scrollbar {
+            height: 6px;
+          }
+          .category-filter-section::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+          }
+          .category-filter-section::-webkit-scrollbar-thumb {
+            background: #ff9500;
+            border-radius: 10px;
+          }
+          .category-filter-section::-webkit-scrollbar-thumb:hover {
+            background: #e68a00;
+          }
+          .category-filter-section {
+            scrollbar-color: #ff9500 #f1f1f1;
+            scrollbar-width: thin;
+          }
+        `}</style>
+        <div
+          className="
+  category-filter-section 
+  flex gap-2 md:gap-4 
+  justify-start md:justify-center 
+  mb-8 md:mb-16 
+  overflow-x-auto md:overflow-visible 
+  pb-2 md:pb-0 
+  px-3 md:px-0 
+  scroll-smooth 
+  snap-x snap-mandatory
+"
+        >
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-md font-semibold shadow-md transition ${
-                selectedCategory === category
-                  ? "bg-black text-white"
-                  : "bg-orange-500 text-white hover:bg-orange-600"
-              }`}
+              className={`
+        px-3 sm:px-4 md:px-2 py-3
+        rounded-md font-semibold shadow-md 
+        transition whitespace-nowrap flex-shrink-0 
+        text-xs sm:text-sm md:text-base 
+        snap-start
+        ${
+          selectedCategory === category
+            ? "bg-black text-white"
+            : "bg-orange-500 text-white hover:bg-orange-600"
+        }
+      `}
             >
               {category.toUpperCase()}
             </button>
@@ -197,7 +249,8 @@ const ExperienceContent = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {paginatedProjects.map((property) => {
-            const images = property.experienceImages || property.images || [property.image];
+            const images = property.experienceImages ||
+              property.images || [property.image];
             const mainImage = images[0];
 
             return (
@@ -248,10 +301,13 @@ const ExperienceContent = () => {
                   </h3>
 
                   {/* Check if all property data is missing */}
-                  {(!property.address && !property.luasTanah && !property.luasBangunan && !property.typeBuilding) ? (
+                  {!property.address &&
+                  !property.luasTanah &&
+                  !property.luasBangunan &&
+                  !property.typeBuilding ? (
                     /* Show only professional message when all data is missing */
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-400 p-4 mb-4 rounded-r-lg">
-                      <div className="flex items-start">
+                      {/* <div className="flex items-start">
                         <div className="flex-shrink-0">
                           <svg className="h-5 w-5 text-blue-400 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
@@ -263,7 +319,8 @@ const ExperienceContent = () => {
                             Galeri portfolio eksklusif kami. Detail teknis dan spesifikasi tersedia melalui konsultasi langsung dengan tim arsitek.
                           </p>
                         </div>
-                      </div>
+                      </div> */}
+                      view gallery
                     </div>
                   ) : (
                     /* Show property details when data is available */
@@ -279,12 +336,17 @@ const ExperienceContent = () => {
                       )}
 
                       {/* Property Details - only show if any data exists */}
-                      {(property.luasTanah || property.luasBangunan || property.typeBuilding) && (
+                      {(property.luasTanah ||
+                        property.luasBangunan ||
+                        property.typeBuilding) && (
                         <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                           {property.luasTanah && (
                             <div className="flex items-center">
                               <FaRulerCombined className="w-4 h-4 mr-2 text-green-500" />
-                              <span className="text-slate-600" title={`LT: ${property.luasTanah}`}>
+                              <span
+                                className="text-slate-600"
+                                title={`LT: ${property.luasTanah}`}
+                              >
                                 LT: {truncateText(property.luasTanah, 15)}
                               </span>
                             </div>
@@ -292,7 +354,10 @@ const ExperienceContent = () => {
                           {property.luasBangunan && (
                             <div className="flex items-center">
                               <FaBuilding className="w-4 h-4 mr-2 text-blue-500" />
-                              <span className="text-slate-600" title={`LB: ${property.luasBangunan}`}>
+                              <span
+                                className="text-slate-600"
+                                title={`LB: ${property.luasBangunan}`}
+                              >
                                 LB: {truncateText(property.luasBangunan, 15)}
                               </span>
                             </div>
@@ -300,7 +365,10 @@ const ExperienceContent = () => {
                           {property.typeBuilding && (
                             <div className="flex items-center col-span-2">
                               <FaBuilding className="w-4 h-4 mr-2 text-purple-500" />
-                              <span className="text-slate-600" title={property.typeBuilding}>
+                              <span
+                                className="text-slate-600"
+                                title={property.typeBuilding}
+                              >
                                 {truncateText(property.typeBuilding, 20)}
                               </span>
                             </div>
@@ -311,8 +379,8 @@ const ExperienceContent = () => {
                   )}
 
                   {/* Show "Lihat Detail" button if any text is truncated */}
-                  {(isTextTruncated(property.luasTanah, 15) || 
-                    isTextTruncated(property.luasBangunan, 15) || 
+                  {(isTextTruncated(property.luasTanah, 15) ||
+                    isTextTruncated(property.luasBangunan, 15) ||
                     isTextTruncated(property.typeBuilding, 20) ||
                     isTextTruncated(property.address, 40)) && (
                     <div className="mb-4">
@@ -478,11 +546,17 @@ const ExperienceContent = () => {
 
               <div className="flex flex-col lg:flex-row max-h-[90vh]">
                 {/* Image/Video Section */}
-                <div className="lg:w-2/3 relative bg-black">
+                <div
+                  className={`${
+                    selectedProject.category &&
+                    selectedProject.category.toLowerCase() === "commercial"
+                      ? "w-full"
+                      : "lg:w-2/3"
+                  } relative bg-black`}
+                >
                   {(() => {
-                    const images = selectedProject.experienceImages || selectedProject.images || [
-                      selectedProject.image,
-                    ];
+                    const images = selectedProject.experienceImages ||
+                      selectedProject.images || [selectedProject.image];
                     const currentMedia = images[currentImageIndex];
 
                     return isVideo(currentMedia) ? (
@@ -504,9 +578,8 @@ const ExperienceContent = () => {
 
                   {/* Navigation Arrows */}
                   {(() => {
-                    const images = selectedProject.experienceImages || selectedProject.images || [
-                      selectedProject.image,
-                    ];
+                    const images = selectedProject.experienceImages ||
+                      selectedProject.images || [selectedProject.image];
                     return (
                       images.length > 1 && (
                         <>
@@ -529,9 +602,8 @@ const ExperienceContent = () => {
 
                   {/* Image Counter */}
                   {(() => {
-                    const images = selectedProject.experienceImages || selectedProject.images || [
-                      selectedProject.image,
-                    ];
+                    const images = selectedProject.experienceImages ||
+                      selectedProject.images || [selectedProject.image];
                     return (
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-sm">
                         {currentImageIndex + 1} / {images.length}
@@ -540,58 +612,65 @@ const ExperienceContent = () => {
                   })()}
                 </div>
 
-                {/* Property Details Section */}
-                <div className="lg:w-1/3 p-6 overflow-y-auto max-h-[40vh] lg:max-h-[90vh]">
-                  <h2 className="text-2xl font-bold text-slate-800 mb-3">
-                    {selectedProject.title}
-                  </h2>
+                {/* Property Details Section - Hide for commercial */}
+                {!(
+                  selectedProject.category &&
+                  selectedProject.category.toLowerCase() === "commercial"
+                ) && (
+                  <div className="lg:w-1/3 p-6 overflow-y-auto max-h-[40vh] lg:max-h-[90vh]">
+                    <h2 className="text-2xl font-bold text-slate-800 mb-3">
+                      {selectedProject.title}
+                    </h2>
 
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center">
-                      <FaMapMarkerAlt className="w-5 h-5 mr-3 text-blue-500" />
-                      <div>
-                        <p className="font-medium text-slate-800">Lokasi</p>
-                        <p className="text-slate-600">
-                          {selectedProject.address || "-"}
-                        </p>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center">
+                        <FaMapMarkerAlt className="w-5 h-5 mr-3 text-blue-500" />
+                        <div>
+                          <p className="font-medium text-slate-800">Lokasi</p>
+                          <p className="text-slate-600">
+                            {selectedProject.address || "-"}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="flex items-center">
-                      <FaRulerCombined className="w-5 h-5 mr-3 text-green-500" />
-                      <div>
-                        <p className="font-medium text-slate-800">Luas Tanah</p>
-                        <p className="text-slate-600">
-                          {selectedProject.luasTanah || "-"}
-                        </p>
+                      <div className="flex items-center">
+                        <FaRulerCombined className="w-5 h-5 mr-3 text-green-500" />
+                        <div>
+                          <p className="font-medium text-slate-800">
+                            Luas Tanah
+                          </p>
+                          <p className="text-slate-600">
+                            {selectedProject.luasTanah || "-"}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="flex items-center">
-                      <FaBuilding className="w-5 h-5 mr-3 text-blue-500" />
-                      <div>
-                        <p className="font-medium text-slate-800">
-                          Luas Bangunan
-                        </p>
-                        <p className="text-slate-600">
-                          {selectedProject.luasBangunan || "-"}
-                        </p>
+                      <div className="flex items-center">
+                        <FaBuilding className="w-5 h-5 mr-3 text-blue-500" />
+                        <div>
+                          <p className="font-medium text-slate-800">
+                            Luas Bangunan
+                          </p>
+                          <p className="text-slate-600">
+                            {selectedProject.luasBangunan || "-"}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="flex items-center">
-                      <FaBuilding className="w-5 h-5 mr-3 text-purple-500" />
-                      <div>
-                        <p className="font-medium text-slate-800">
-                          Tipe Bangunan
-                        </p>
-                        <p className="text-slate-600">
-                          {selectedProject.typeBuilding || "-"}
-                        </p>
+                      <div className="flex items-center">
+                        <FaBuilding className="w-5 h-5 mr-3 text-purple-500" />
+                        <div>
+                          <p className="font-medium text-slate-800">
+                            Tipe Bangunan
+                          </p>
+                          <p className="text-slate-600">
+                            {selectedProject.typeBuilding || "-"}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ const productsData = [
       "Jl. Mampang Prapatan raya No.19,21,22, Kel. Mampang Prapatan, Jakarta Selatan",
     image: "/images/gbr/01-grand-mampang/GRAND-MAMPANG-RENDER.jpg",
     images: [
-      "/images/gbr/01-grand-mampang/GRAND-MAMPANG.jpg",
+      "/images/gbr/01-grand-mampang/GRAND-MAMPANG-AI.png",
       "/images/gbr/01-grand-mampang/GRAND-MAMPANG-RENDER.jpg",
       "/images/gbr/01-grand-mampang/01-GRAND-MAMPANG-DENAH-BASEMENT.jpg",
       "/images/gbr/01-grand-mampang/02-GRAND-MAMPANG-DENAH-L1.jpg",
@@ -53,7 +53,8 @@ const productsData = [
     address: "Jl. Otto Iskandar Dinata No.37, Kel. Bidaracina, Jakarta Timur",
     image: "/images/gbr/02-grand-otista/grand-otista.jpg",
     images: [
-      "/images/gbr/02-grand-otista/grand-otista-01.jpg",
+      // "/images/gbr/02-grand-otista/grand-otista-01.jpg",
+      "/images/gbr/02-grand-otista/GRAND-OTISTA-AI.png",
       "/images/gbr/02-grand-otista/grand-otista.jpg",
       "/images/gbr/02-grand-otista/01-GRAND-OTISTA-DENAH-BASEMENT.jpg",
       "/images/gbr/02-grand-otista/02-GRAND-OTISTA-DENAH-LT1.jpg",
@@ -154,7 +155,8 @@ const productsData = [
     address: "Jl. Dewi sartika Raya No.3131, Kel. Cawang, Jakarta Timur",
     image: "/images/gbr/04-dewi-sartika/DEWISARTIKA-RENDER.jpg",
     images: [
-      "/images/gbr/04-dewi-sartika/DEWISARTIKA.jpg",
+      // "/images/gbr/04-dewi-sartika/DEWISARTIKA.jpg",
+      "/images/gbr/04-dewi-sartika/DEWISARTIKA-AI.png",
       "/images/gbr/04-dewi-sartika/DEWISARTIKA-RENDER.jpg",
       "/images/gbr/04-dewi-sartika/01-DEWISARTIKA-DENAH-LT1.jpg",
       "/images/gbr/04-dewi-sartika/02-DEWISARTIKA-DENAH-LT2.jpg",
@@ -205,7 +207,8 @@ const productsData = [
     address: "Jl. Utan Kayu Raya no. 86, Jakarta Timur",
     image: "/images/gbr/05-utan-kayu/UTAN-KAYU-RENDER.webp",
     images: [
-      "/images/gbr/05-utan-kayu/UTAN-KAYU.jpg",
+      // "/images/gbr/05-utan-kayu/UTAN-KAYU.jpg",
+      "/images/gbr/05-utan-kayu/UTAN-KAYU-AI.png",
       "/images/gbr/05-utan-kayu/UTAN-KAYU-RENDER.webp",
       "/images/gbr/05-utan-kayu/01-lt1.jpg",
       "/images/gbr/05-utan-kayu/02-lt2.jpg",
@@ -309,9 +312,9 @@ const productsData = [
     category: "office",
     title: "RUKAN & GEDUNG KALIMALANG (READY 3 UNIT)",
     address: "Jl. Lidi A 20/30, Kalimalang, Jakarta Timur",
-    image: "/images/gbr/07-kalimalang/KALIMALANG.jpg",
+    image: "/images/gbr/07-kalimalang/KALIMALANG-AI.png",
     images: [
-      "/images/gbr/07-kalimalang/KALIMALANG.jpg",
+      "/images/gbr/07-kalimalang/KALIMALANG-AI.png",
       "/images/gbr/07-kalimalang/KALIMALANG-RENDER.jpg",
     ],
     soldOut: false,
@@ -511,7 +514,8 @@ const productsData = [
     address: "Jakarta Selatan",
     image: "/images/gbr/16-pancoran-3/PANCORAN-3-RENDER.jpg",
     images: [
-      "/images/gbr/16-pancoran-3/PANCORAN-3.jpg",
+      // "/images/gbr/16-pancoran-3/PANCORAN-3.jpg",
+      "/images/gbr/16-pancoran-3/PANCORAN-AI.jpg",
       "/images/gbr/16-pancoran-3/PANCORAN-3-RENDER.jpg",
     ],
     soldOut: true,
@@ -886,7 +890,7 @@ const productsData = [
     luasBangunan: "320m2",
     typeBuilding: "Private Residence",
   },
-   {
+  {
     id: 46,
     category: "residential",
     title: "RUMAH TQ",
@@ -897,7 +901,7 @@ const productsData = [
     luasBangunan: "250m2",
     typeBuilding: "Private Residence",
   },
-     {
+  {
     id: 47,
     category: "residential",
     title: "RUMAH TY",
@@ -907,6 +911,113 @@ const productsData = [
     luasTanah: "200m2",
     luasBangunan: "315m2",
     typeBuilding: "Private Residence",
+  },
+
+  // Commercial Ruko properties
+  {
+    id: 48,
+    category: "commercial",
+    title: "RUKO AKIK",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-akik/RUKO AKIK.webp",
+  },
+  {
+    id: 49,
+    category: "commercial",
+    title: "RUKO BENDA",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-benda/RUKO BENDA.webp",
+  },
+  {
+    id: 50,
+    category: "commercial",
+    title: "RUKO BU LILIS",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-bulilis/RUKO BU LILIS.webp",
+  },
+  {
+    id: 51,
+    category: "commercial",
+    title: "RUKO BUNCIT",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-buncit/RUKO BUNCIT.webp",
+  },
+  {
+    id: 52,
+    category: "commercial",
+    title: "RUKO CATUR",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-catur/RUKO CATUR.webp",
+  },
+  {
+    id: 53,
+    category: "commercial",
+    title: "RUKO DEWI SARTIKA",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-dewisartika/RUKO DEWISARTIKA.webp",
+  },
+  {
+    id: 54,
+    category: "commercial",
+    title: "RUKO JALAN LIDI",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-jalan-lidi/RUKO JALAN LIDI.webp",
+  },
+  {
+    id: 55,
+    category: "commercial",
+    title: "RUKO JATINEGARA",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-jatinegara/RUKOJATINEGARA.webp",
+  },
+  {
+    id: 56,
+    category: "commercial",
+    title: "RUKO KALIMALANG",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-kalimalang/RUKO KALIMALANG.webp",
+  },
+  {
+    id: 57,
+    category: "commercial",
+    title: "RUKO KEMANG BANDA RAYA",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-banda-raya/RUKO KEMANG BANDA RAYA.webp",
+  },
+  {
+    id: 58,
+    category: "commercial",
+    title: "RUKO OTISTA 1",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-otista-1/RUKO OTISTA 1.webp",
+  },
+  {
+    id: 59,
+    category: "commercial",
+    title: "RUKO POTLOT",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-potlot/RUKO POTLOT.webp",
+  },
+  {
+    id: 60,
+    category: "commercial",
+    title: "RUKO PRAMUKA",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-pramuka/RUKO PRAMUKA.webp",
+  },
+    {
+    id: 61,
+    category: "commercial",
+    title: "RUKO SURABAYA",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-surabaya/RUKO SURABAYA.webp",
+  },
+    {
+    id: 61,
+    category: "commercial",
+    title: "RUKO TEBET",
+    // address: "Jakarta",
+    image: "/images/gbr/ruko/ruko-tebet/RUKO TEBET.webp",
   },
 ];
 

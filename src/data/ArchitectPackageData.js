@@ -25,7 +25,7 @@ const architectPackageData = [
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum/PVC" },
           { feature: "Outlet", detail: "Panasonic" }
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 150 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)"
+        additionalNote: "LUAS BANGUNAN MINIMAL 150 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN."
       },
       {
         packageId: "A2",
@@ -47,7 +47,7 @@ const architectPackageData = [
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum/GRC" },
           { feature: "Outlet", detail: "Panasonic" }
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)"
+        additionalNote: "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN"
       },
       {
         packageId: "A3",
@@ -69,7 +69,7 @@ const architectPackageData = [
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum/GRC" },
           { feature: "Outlet", detail: "Panasonic" }
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 300 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)"
+        additionalNote: "LUAS BANGUNAN MINIMAL 300 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN"
       }
     ],
     buttonText: "Consultations"
@@ -168,7 +168,7 @@ const architectPackageData = [
       { feature: "Plafond", detail: "-" },
       { feature: "Outlet", detail: "Panasonic" }
     ],
-    additionalNote: "LUAS BANGUNAN MINIMAL 1000 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)",
+    additionalNote: "LUAS BANGUNAN MINIMAL 1000 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN",
     buttonText: "Consultations"
   }
 ];
