@@ -56,7 +56,7 @@ const PackageInteriors = () => {
 
             {/* Main Image */}
             <img
-              src="/images/partial/package-interiors.jpg"
+              src="/images/partial/paket-interior.jpg"
               alt="Paket Interior - Desain Interior Profesional"
               className={`w-full h-auto object-cover object-center transition-opacity duration-300 ${
                 imageLoaded ? "opacity-100" : "opacity-0"

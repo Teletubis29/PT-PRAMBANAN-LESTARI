@@ -307,19 +307,6 @@ const ExperienceContent = () => {
                   !property.typeBuilding ? (
                     /* Show only professional message when all data is missing */
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-400 p-4 mb-4 rounded-r-lg">
-                      {/* <div className="flex items-start">
-                        <div className="flex-shrink-0">
-                          <svg className="h-5 w-5 text-blue-400 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="ml-3">
-                          <h4 className="text-sm font-semibold text-blue-800">Proyek Telah Selesai</h4>
-                          <p className="text-sm text-blue-700">
-                            Galeri portfolio eksklusif kami. Detail teknis dan spesifikasi tersedia melalui konsultasi langsung dengan tim arsitek.
-                          </p>
-                        </div>
-                      </div> */}
                       view gallery
                     </div>
                   ) : (
@@ -362,14 +349,14 @@ const ExperienceContent = () => {
                               </span>
                             </div>
                           )}
-                          {property.typeBuilding && (
+                          { (property.typeBuilding || property.bangunan) && (
                             <div className="flex items-center col-span-2">
                               <FaBuilding className="w-4 h-4 mr-2 text-purple-500" />
                               <span
                                 className="text-slate-600"
-                                title={property.typeBuilding}
+                                title={property.typeBuilding || property.bangunan}
                               >
-                                {truncateText(property.typeBuilding, 20)}
+                                {truncateText(property.typeBuilding || property.bangunan, 20)}
                               </span>
                             </div>
                           )}
@@ -535,7 +522,7 @@ const ExperienceContent = () => {
         {/* Modal */}
         {selectedProject && (
           <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
-            <div className="relative max-w-5xl max-h-full bg-white rounded-2xl overflow-hidden">
+            <div className="relative w-full max-w-6xl bg-white rounded-2xl overflow-hidden shadow-2xl">
               {/* Close Button */}
               <button
                 onClick={closeModal}
@@ -544,7 +531,7 @@ const ExperienceContent = () => {
                 <FaTimes className="w-6 h-6" />
               </button>
 
-              <div className="flex flex-col lg:flex-row max-h-[90vh]">
+              <div className="flex flex-col lg:flex-row h-screen lg:h-auto max-h-[90vh]">
                 {/* Image/Video Section */}
                 <div
                   className={`${
@@ -552,7 +539,7 @@ const ExperienceContent = () => {
                     selectedProject.category.toLowerCase() === "commercial"
                       ? "w-full"
                       : "lg:w-2/3"
-                  } relative bg-black`}
+                  } relative bg-slate-900 flex items-center justify-center min-h-[400px] lg:min-h-[600px]`}
                 >
                   {(() => {
                     const images = selectedProject.experienceImages ||
@@ -562,7 +549,7 @@ const ExperienceContent = () => {
                     return isVideo(currentMedia) ? (
                       <video
                         src={currentMedia}
-                        className="w-full h-full object-contain max-h-[60vh] lg:max-h-[90vh]"
+                        className="w-full h-full object-contain"
                         controls
                         autoPlay
                         muted
@@ -571,7 +558,7 @@ const ExperienceContent = () => {
                       <img
                         src={currentMedia}
                         alt={selectedProject.title}
-                        className="w-full h-full object-contain max-h-[60vh] lg:max-h-[90vh]"
+                        className="w-full h-full object-contain"
                       />
                     );
                   })()}
@@ -613,11 +600,14 @@ const ExperienceContent = () => {
                 </div>
 
                 {/* Property Details Section - Hide for commercial */}
-                {!(
-                  selectedProject.category &&
-                  selectedProject.category.toLowerCase() === "commercial"
-                ) && (
-                  <div className="lg:w-1/3 p-6 overflow-y-auto max-h-[40vh] lg:max-h-[90vh]">
+                {
+                (selectedProject.category?.toLowerCase() !== "commercial" ||
+                  (selectedProject.category?.toLowerCase() === "commercial" &&
+                    (selectedProject.address ||
+                      selectedProject.luasTanah ||
+                      selectedProject.luasBangunan ||
+                      selectedProject.bangunan))) && (
+                  <div className="lg:w-1/3 p-6 overflow-y-auto max-h-[90vh]">
                     <h2 className="text-2xl font-bold text-slate-800 mb-3">
                       {selectedProject.title}
                     </h2>
@@ -664,7 +654,7 @@ const ExperienceContent = () => {
                             Tipe Bangunan
                           </p>
                           <p className="text-slate-600">
-                            {selectedProject.typeBuilding || "-"}
+                            {selectedProject.bangunan || "-"}
                           </p>
                         </div>
                       </div>

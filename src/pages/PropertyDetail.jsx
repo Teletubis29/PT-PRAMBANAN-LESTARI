@@ -15,7 +15,12 @@ const PropertyDetail = () => {
 
   // Helper untuk mendeteksi apakah file adalah video
   const isVideo = (fileName) => {
-    return fileName && (fileName.includes('.mp4') || fileName.includes('.webm') || fileName.includes('.ogg'));
+    return (
+      fileName &&
+      (fileName.includes(".mp4") ||
+        fileName.includes(".webm") ||
+        fileName.includes(".ogg"))
+    );
   };
 
   const nextImage = () => {
@@ -34,16 +39,16 @@ const PropertyDetail = () => {
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (images.length > 1) {
-        if (e.key === 'ArrowLeft') {
+        if (e.key === "ArrowLeft") {
           prevImage();
-        } else if (e.key === 'ArrowRight') {
+        } else if (e.key === "ArrowRight") {
           nextImage();
         }
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
   }, [images.length]);
 
   // Helper untuk render icon dari string
@@ -130,7 +135,7 @@ const PropertyDetail = () => {
                       className="w-full h-full object-contain bg-gray-100 transition-transform duration-300"
                     />
                   )}
-                  
+
                   {/* Navigation Arrows - Only show if more than 1 image */}
                   {images.length > 1 && (
                     <>
@@ -179,8 +184,8 @@ const PropertyDetail = () => {
                           onClick={() => goToImage(index)}
                           className={`w-3 h-3 rounded-full transition-all duration-200 ${
                             currentImageIndex === index
-                              ? 'bg-white'
-                              : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                              ? "bg-white"
+                              : "bg-white bg-opacity-50 hover:bg-opacity-75"
                           }`}
                         />
                       ))}
@@ -198,8 +203,8 @@ const PropertyDetail = () => {
                           onClick={() => goToImage(index)}
                           className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 relative ${
                             currentImageIndex === index
-                              ? 'border-orange-500 opacity-100'
-                              : 'border-gray-200 opacity-70 hover:opacity-100'
+                              ? "border-orange-500 opacity-100"
+                              : "border-gray-200 opacity-70 hover:opacity-100"
                           }`}
                         >
                           {isVideo(image) ? (
@@ -303,7 +308,9 @@ const PropertyDetail = () => {
                     {property.telekomunikasi && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Telekomunikasi:</span>
-                        <span className="font-medium">{property.telekomunikasi}</span>
+                        <span className="font-medium">
+                          {property.telekomunikasi}
+                        </span>
                       </div>
                     )}
                     {property.ac && (
@@ -315,13 +322,17 @@ const PropertyDetail = () => {
                     {property.fireSystem && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Fire System:</span>
-                        <span className="font-medium">{property.fireSystem}</span>
+                        <span className="font-medium">
+                          {property.fireSystem}
+                        </span>
                       </div>
                     )}
                     {property.kamarMandi && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Kamar Mandi:</span>
-                        <span className="font-medium">{property.kamarMandi}</span>
+                        <span className="font-medium">
+                          {property.kamarMandi}
+                        </span>
                       </div>
                     )}
                     {property.sanitary && (
@@ -351,7 +362,9 @@ const PropertyDetail = () => {
                     {property.aksesJalan && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Akses Jalan:</span>
-                        <span className="font-medium">{property.aksesJalan}</span>
+                        <span className="font-medium">
+                          {property.aksesJalan}
+                        </span>
                       </div>
                     )}
                   </div>
@@ -517,18 +530,29 @@ const PropertyDetail = () => {
               )}
 
               <div className="space-y-3">
-                <button className="w-full bg-orange-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-orange-600 transition">
+                <a
+                  href="https://wa.me/6281188088995"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-orange-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-orange-600 transition inline-flex items-center justify-center" // Menambahkan 'inline-flex items-center justify-center' untuk penataan ikon dan teks yang lebih baik di dalam tautan.
+                >
                   <FaIcons.FaWhatsapp className="inline mr-2" />
                   Chat WhatsApp
-                </button>
-                <button className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-600 transition">
+                </a>
+                <a
+                  href="tel:0218509305"
+                  className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-600 transition inline-flex items-center justify-center"
+                >
                   <FaIcons.FaPhone className="inline mr-2" />
                   Telepon Sekarang
-                </button>
-                <button className="w-full border border-orange-500 text-orange-500 py-3 px-4 rounded-lg font-medium hover:bg-orange-50 transition">
+                </a>
+                <a
+                  href="mailto:dev.prambananlestari@gmail.com" // Menggunakan skema "mailto:" dengan alamat email tujuan
+                  className="w-full border border-orange-500 text-orange-500 py-3 px-4 rounded-lg font-medium hover:bg-orange-50 transition inline-flex items-center justify-center"
+                >
                   <FaIcons.FaEnvelope className="inline mr-2" />
                   Kirim Email
-                </button>
+                </a>
               </div>
             </div>
 
@@ -588,7 +612,7 @@ const PropertyDetail = () => {
                 <li>✓ After sales service</li>
               </ul>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </div>

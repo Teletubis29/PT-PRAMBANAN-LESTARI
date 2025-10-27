@@ -23,7 +23,7 @@ export default function ArchitectGuidelines() {
                   Sebelum merancang / membangun,
                   <br />
                   <span className="text-orange-600">
-                    Office, Rumah & Komersial,
+                    Kantor, Rumah & Komersial,
                   </span>
                   <br />
                   pastikan Anda memahami hal berikut:
@@ -56,7 +56,7 @@ export default function ArchitectGuidelines() {
                       Tata letak
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Desain bangunan office, rumah, dan komersial harus memiliki
+                      Desain bangunan Kantor, rumah, dan komersial harus memiliki
                       tata letak yang menawarkan akses serta pergerakan mudah untuk
                       kenyamanan penghuni atau pengunjung.
                     </p>

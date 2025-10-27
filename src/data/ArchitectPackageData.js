@@ -4,6 +4,19 @@ const architectPackageData = [
     title: "PAKET RUMAH TINGGAL",
     subtitle: "3 Pilihan Paket",
     description: "Paket A1, A2, A3 untuk Rumah Tinggal",
+    notes: [
+      "Surat izin mendirikan bangunan (IMB)",
+      "Penyambungan instalasi listrik dari PLN",
+      "Penyambungan instalasi air dari PAM",
+      "Penyambungan instalasi telepon dari TELKOM",
+      "Pekerjaan pagar keliling",
+      "Pekerjaan taman",
+      "Pagar depan",
+      "Batu alam",
+      "Lampu sorot dan gantung",
+      "Pajak pembangunan",
+      "Sarana utilitas (unit AC, unit Lift, unit Fire system, Genset, Kabel data, CCTV)",
+    ],
     packages: [
       {
         packageId: "A1",
@@ -23,9 +36,10 @@ const architectPackageData = [
           { feature: "Cat", detail: "Dulux (Exterior), Catylac (Interior)" },
           { feature: "Lantai", detail: "Granit tile 60 x 60" },
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum/PVC" },
-          { feature: "Outlet", detail: "Panasonic" }
+          { feature: "Outlet", detail: "Panasonic" },
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 150 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN."
+        additionalNote:
+          "LUAS BANGUNAN MINIMAL 150 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN.",
       },
       {
         packageId: "A2",
@@ -45,9 +59,10 @@ const architectPackageData = [
           { feature: "Cat", detail: "Dulux (Exterior & Interior)" },
           { feature: "Lantai", detail: "Granit tile 80 x80" },
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum/GRC" },
-          { feature: "Outlet", detail: "Panasonic" }
+          { feature: "Outlet", detail: "Panasonic" },
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN"
+        additionalNote:
+          "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN",
       },
       {
         packageId: "A3",
@@ -60,19 +75,23 @@ const architectPackageData = [
           { feature: "Struktur", detail: "Beton Bertulang K250" },
           { feature: "Dinding", detail: "Bata Merah" },
           { feature: "Kusen Pintu & Jendela", detail: "Jati" },
-          { feature: "Daun Pintu", detail: "Jati finishing varnish/politur/duco" },
+          {
+            feature: "Daun Pintu",
+            detail: "Jati finishing varnish/politur/duco",
+          },
           { feature: "Kuda-kuda", detail: "Baja Ringan" },
           { feature: "Genteng", detail: "Aspal/Tegola" },
           { feature: "Sanitary", detail: "Toto" },
           { feature: "Cat", detail: "Dulux (Exterior & Interior)" },
           { feature: "Lantai", detail: "Marmer / Granite Stone" },
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum/GRC" },
-          { feature: "Outlet", detail: "Panasonic" }
+          { feature: "Outlet", detail: "Panasonic" },
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 300 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN"
-      }
+        additionalNote:
+          "LUAS BANGUNAN MINIMAL 300 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN",
+      },
     ],
-    buttonText: "Consultations"
+    buttonText: "Consultations",
   },
   {
     id: 2,
@@ -92,16 +111,46 @@ const architectPackageData = [
       { feature: "Lantai", detail: "Granit tile 80 x80" },
       { feature: "Plafond", detail: "Rangka Hollow dan Gypsum" },
       { feature: "Outlet", detail: "Panasonic" },
-      { feature: "Utilitas", detail: "Shaft lift, ducting AC, pemipaan firesystem" }
+      {
+        feature: "Utilitas",
+        detail: "Shaft lift, ducting AC, pemipaan firesystem",
+      },
     ],
-    additionalNote: "LUAS BANGUNAN MINIMAL 1000 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)",
-    buttonText: "Consultations"
+    additionalNote:
+      "LUAS BANGUNAN MINIMAL 1000 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN.",
+    notes: [
+      "Surat izin mendirikan bangunan (IMB)",
+      "Penyambungan instalasi listrik dari PLN",
+      "Penyambungan instalasi air dari PAM",
+      "Penyambungan instalasi telepon dari TELKOM",
+      "Pekerjaan pagar keliling",
+      "Pekerjaan taman",
+      "Pagar depan",
+      "Batu alam",
+      "Lampu sorot dan gantung",
+      "Pajak pembangunan",
+      "Sarana utilitas (unit AC, unit Lift, unit Fire system, Genset, Kabel data, CCTV)",
+    ],
+    buttonText: "Consultations",
   },
   {
     id: 3,
     title: "JASA KONSTRUKSI RUMAH TOKO",
     subtitle: "2 Pilihan Paket",
     description: "Paket Standar & Premium untuk Rumah Toko",
+    notes: [
+      "Surat izin mendirikan bangunan (IMB)",
+      "Penyambungan instalasi listrik dari PLN",
+      "Penyambungan instalasi air dari PAM",
+      "Penyambungan instalasi telepon dari TELKOM",
+      "Pekerjaan pagar keliling",
+      "Pekerjaan taman",
+      "Pagar depan",
+      "Batu alam",
+      "Lampu sorot dan gantung",
+      "Pajak pembangunan",
+      "Sarana utilitas (unit AC, unit Lift, unit Fire system, Genset, Kabel data, CCTV)",
+    ],
     packages: [
       {
         packageId: "RT1",
@@ -120,9 +169,10 @@ const architectPackageData = [
           { feature: "Cat", detail: "Dulux/Catylax" },
           { feature: "Lantai", detail: "Granit tile 60 x60" },
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum" },
-          { feature: "Outlet", detail: "Panasonic" }
+          { feature: "Outlet", detail: "Panasonic" },
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)"
+        additionalNote:
+          "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN.",
       },
       {
         packageId: "RT2",
@@ -141,12 +191,13 @@ const architectPackageData = [
           { feature: "Cat", detail: "Dulux/Catylax" },
           { feature: "Lantai", detail: "Granit tile 60 x60" },
           { feature: "Plafond", detail: "Rangka Hollow dan Gypsum" },
-          { feature: "Outlet", detail: "Panasonic" }
+          { feature: "Outlet", detail: "Panasonic" },
         ],
-        additionalNote: "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - FREE DESIGN PRA RENCANA (Denah & Tampak 3D)"
-      }
+        additionalNote:
+          "LUAS BANGUNAN MINIMAL 200 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN.",
+      },
     ],
-    buttonText: "Consultations"
+    buttonText: "Consultations",
   },
   {
     id: 4,
@@ -166,11 +217,25 @@ const architectPackageData = [
       { feature: "Cat", detail: "Vinilex" },
       { feature: "Lantai", detail: "Screed Lantai Beton t = 15cm" },
       { feature: "Plafond", detail: "-" },
-      { feature: "Outlet", detail: "Panasonic" }
+      { feature: "Outlet", detail: "Panasonic" },
     ],
-    additionalNote: "LUAS BANGUNAN MINIMAL 1000 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN",
-    buttonText: "Consultations"
-  }
+    additionalNote:
+      "LUAS BANGUNAN MINIMAL 1000 M2 - HARGA DI ATAS TIDAK MENGIKAT - HARGA TERSEBUT SUDAH TERMASUK FREE DESIGN",
+    notes: [
+      "Surat izin mendirikan bangunan (IMB)",
+      "Penyambungan instalasi listrik dari PLN",
+      "Penyambungan instalasi air dari PAM",
+      "Penyambungan instalasi telepon dari TELKOM",
+      "Pekerjaan pagar keliling",
+      "Pekerjaan taman",
+      "Pagar depan",
+      "Batu alam",
+      "Lampu sorot dan gantung",
+      "Pajak pembangunan",
+      "Sarana utilitas (unit AC, unit Lift, unit Fire system, Genset, Kabel data, CCTV)",
+    ],
+    buttonText: "Consultations",
+  },
 ];
 
 export default architectPackageData;

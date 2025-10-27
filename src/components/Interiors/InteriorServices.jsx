@@ -12,7 +12,7 @@ const InteriorServices = () => {
     },
     {
       title: "Tata letak",
-      description: "design interior office, rumah dan komersial yang bagus harus memiliki tata letak yang menawarkan akses dan pergerakan"
+      description: "design interior Kantor, rumah dan komersial yang bagus harus memiliki tata letak yang menawarkan akses dan pergerakan"
     }
   ];
 
@@ -47,7 +47,7 @@ const InteriorServices = () => {
               {/* Header */}
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                  Sebelum merancang pekerjaan Design Interior bangunan Office,
+                  Sebelum merancang pekerjaan Design Interior bangunan Kantor,
                   Rumah, dan Komersial
                   <span className="block text-lg font-normal text-gray-600 mt-2">
                     pastikan Anda memahami hal berikut

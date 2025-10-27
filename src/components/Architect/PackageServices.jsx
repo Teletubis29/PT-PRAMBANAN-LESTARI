@@ -222,6 +222,22 @@ export default function PackageServices() {
                   )}
                 </>
               )}
+
+              {selectedPackage.notes && (
+                <div className="mt-6 p-4 bg-gray-100 border border-gray-200 rounded-lg">
+                  <h4 className="text-lg font-bold text-gray-800 mb-2">
+                    Catatan
+                  </h4>
+                  <p className="text-sm text-gray-700 mb-3">
+                    Penawaran harga tersebut tidak termasuk:
+                  </p>
+                  <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+                    {selectedPackage.notes.map((note, index) => (
+                      <li key={index}>{note}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             {/* Modal Footer - Fixed */}
