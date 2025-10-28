@@ -630,7 +630,7 @@ const ExperienceContent = () => {
                             Luas Tanah
                           </p>
                           <p className="text-slate-600">
-                            {selectedProject.luasTanah || "-"}
+                            {selectedProject.luasTanahSertifikat || "-"}
                           </p>
                         </div>
                       </div>

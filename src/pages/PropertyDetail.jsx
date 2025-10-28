@@ -547,7 +547,7 @@ const PropertyDetail = () => {
                   Telepon Sekarang
                 </a>
                 <a
-                  href="mailto:dev.prambananlestari@gmail.com" // Menggunakan skema "mailto:" dengan alamat email tujuan
+                  href="mailto:dev.prambananlestari@gmail.com" 
                   className="w-full border border-orange-500 text-orange-500 py-3 px-4 rounded-lg font-medium hover:bg-orange-50 transition inline-flex items-center justify-center"
                 >
                   <FaIcons.FaEnvelope className="inline mr-2" />

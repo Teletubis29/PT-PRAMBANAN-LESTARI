@@ -14,9 +14,14 @@ export default function PromoSection() {
             dan bisnis yang mandiri energi bersama Solar Panel Suray. <br />{" "}
             Info lebih lanjut hubungi kami. <br />
           </p>
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition">
+          <a
+            href="https://wa.me/6281188088995" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition"
+          >
             Chat Whatsapp
-          </button>
+          </a>
         </div>
 
         {/* RIGHT IMAGES */}

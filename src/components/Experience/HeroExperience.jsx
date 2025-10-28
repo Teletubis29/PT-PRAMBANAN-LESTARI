@@ -53,7 +53,7 @@ const HeroExperience = () => {
             <img
               src={images[2]}
               alt="gallery3"
-              className={`rounded-2xl w-72 h-52 object-cover shadow-2xl border-4 border-white transition-all duration-1000 ${
+              className={`rounded-sm w-96 h-72 object-cover shadow-2xl border-2 border-white transition-all duration-1000 ${
                 animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{
