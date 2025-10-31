@@ -305,6 +305,14 @@ const PropertyDetail = () => {
                         <span className="font-medium">{property.lift}</span>
                       </div>
                     )}
+                    {property.kamarMandi && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Kamar Mandi:</span>
+                        <span className="font-medium">
+                          {property.kamarMandi}
+                        </span>
+                      </div>
+                    )}
                     {property.telekomunikasi && (
                       <div className="flex justify-between">
                         <span className="text-gray-600">Telekomunikasi:</span>
@@ -324,14 +332,6 @@ const PropertyDetail = () => {
                         <span className="text-gray-600">Fire System:</span>
                         <span className="font-medium">
                           {property.fireSystem}
-                        </span>
-                      </div>
-                    )}
-                    {property.kamarMandi && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Kamar Mandi:</span>
-                        <span className="font-medium">
-                          {property.kamarMandi}
                         </span>
                       </div>
                     )}
@@ -357,14 +357,6 @@ const PropertyDetail = () => {
                       <div className="flex justify-between">
                         <span className="text-gray-600">Plafon:</span>
                         <span className="font-medium">{property.plafon}</span>
-                      </div>
-                    )}
-                    {property.aksesJalan && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Akses Jalan:</span>
-                        <span className="font-medium">
-                          {property.aksesJalan}
-                        </span>
                       </div>
                     )}
                   </div>
@@ -482,7 +474,7 @@ const PropertyDetail = () => {
 
             {/* Lokasi */}
             {property.lokasi && (
-              <div className="bg-white rounded-xl shadow-lg p-6">
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
                   Lokasi Strategis
                 </h2>
@@ -497,6 +489,41 @@ const PropertyDetail = () => {
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Google Maps Embed Preview */}
+            {property.googleMapsLink && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-8 overflow-hidden">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                  Peta Lokasi
+                </h2>
+                <div className="w-full h-96 rounded-lg overflow-hidden border-2 border-gray-200">
+                  <iframe
+                    title="Google Maps Location"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    src={
+                      property.mapCoordinates
+                        ? `https://maps.google.com/maps?q=${property.mapCoordinates.lat},${property.mapCoordinates.lng}&t=&z=17&ie=UTF8&iwloc=&output=embed`
+                        : `https://maps.google.com/maps?q=${encodeURIComponent(property.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`
+                    }
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <p className="text-sm text-gray-600 mt-3">
+                  <a 
+                    href={property.googleMapsLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-600 font-medium"
+                  >
+                    Buka di Google Maps →
+                  </a>
+                </p>
               </div>
             )}
           </div>
@@ -566,24 +593,6 @@ const PropertyDetail = () => {
                 <p className="text-yellow-700 text-sm italic">
                   {property.additionalNote}
                 </p>
-              </div>
-            )}
-
-            {/* Google Maps Link */}
-            {property.googleMapsLink && (
-              <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                  Lokasi di Peta
-                </h2>
-                <a
-                  href={property.googleMapsLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-blue-500 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-600 transition"
-                >
-                  <FaIcons.FaMapMarkerAlt size={20} />
-                  Lihat di Google Maps
-                </a>
               </div>
             )}
 

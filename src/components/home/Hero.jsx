@@ -23,16 +23,22 @@ const Hero = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden">
-      {/* Image */}
+    <section className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden bg-black">
+      {/* Video Hero - Responsive (Full visible di mobile) */}
       <video
         src="/videos/hero-home.mp4"
-        className="absolute inset-0 w-full h-full object-cover"
+        poster="/images/banners/header.jpg"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover"
         autoPlay
         loop
         muted
+        playsInline
         controls={false}
+        preload="auto"
       />
+      
+      {/* Overlay (optional) */}
+      <div className="absolute inset-0 bg-black/20" />
     </section>
   );
 };
