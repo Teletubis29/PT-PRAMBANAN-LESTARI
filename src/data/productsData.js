@@ -44,7 +44,7 @@ const productsData = [
       "Parkir Halaman (9 unit mobil)",
       "Penangkal Petir",
       "CCTV (Indoor & Outdoor)",
-      "Genset Backup 80% (Parkir/setara)",
+      "Genset Backup 80% (Perkins/setara)",
     ],
     // Lokasi Strategis - Sesuai gambar Excel
     lokasi: [
@@ -96,7 +96,7 @@ const productsData = [
     kamarMandi: "4 KM tiap lantai",
     telekomunikasi: "@2 Line (Tidak termasuk PABX)",
     ac: "AC Ducting Daikin",
-    fireSystem: "Autamtic Sprinkler, Smoke Detector, Fire Alrm",
+    fireSystem: "Autamtic Sprinkler, Smoke Detector, Fire Alarm",
     sanitary: "Toto",
     air: "Drilling Jetpump (Groundfos)",
     lantai: "Granite (60 x 60 cm)",
@@ -112,8 +112,8 @@ const productsData = [
     // Lokasi Strategis - Sesuai gambar Excel
     lokasi: [
       { icon: "FaMapMarkerAlt", text: "10 menit gerbang tol cawang" },
-      { icon: "FaRoad", text: "10 meit tol dalam kota" },
-      { icon: "FaBuilding", text: "10 meit terminal kp. Melayu" },
+      { icon: "FaRoad", text: "10 menit tol dalam kota" },
+      { icon: "FaBuilding", text: "10 menit terminal kp. Melayu" },
     ],
     // Facilities untuk ditampilkan dengan icon
     facilities: [

@@ -23,8 +23,8 @@ const Hero = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden bg-black">
-      {/* Video Hero - Responsive (Full visible di mobile) */}
+    <section className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden bg-gray-900">
+      {/* Video Hero - Full visible di mobile, cover di desktop */}
       <video
         src="/videos/hero-home.mp4"
         poster="/images/banners/header.jpg"

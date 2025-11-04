@@ -561,7 +561,7 @@ const PropertyDetail = () => {
                   href="https://wa.me/6281188088995"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-orange-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-orange-600 transition inline-flex items-center justify-center" // Menambahkan 'inline-flex items-center justify-center' untuk penataan ikon dan teks yang lebih baik di dalam tautan.
+                  className="w-full bg-orange-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-orange-600 transition inline-flex items-center justify-center"
                 >
                   <FaIcons.FaWhatsapp className="inline mr-2" />
                   Chat WhatsApp
@@ -581,6 +581,20 @@ const PropertyDetail = () => {
                   Kirim Email
                 </a>
               </div>
+            </div>
+
+            {/* Share Card */}
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                  alert('Link properti disalin!');
+                }}
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded-lg font-medium transition inline-flex items-center justify-center gap-2 shadow-md"
+              >
+                <FaIcons.FaShare size={18} />
+                Bagikan Link
+              </button>
             </div>
 
             {/* Additional Note */}
