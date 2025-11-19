@@ -95,7 +95,7 @@ export default function Footer() {
           <Box sx={{ display: "flex", gap: { xs: 2, md: 3 }, justifyContent: "center" }}>
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/profile.php?id=61580048867195"
+              href="https://www.facebook.com/share/1Bqay1YkSX/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", transition: "all 0.3s ease" }}
@@ -125,7 +125,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/prambananlestari.id/"
+              href="https://www.instagram.com/prambananproperti.id/?igsh=MXdmNm5sZTg2NGxsdg%3D%3D#"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", transition: "all 0.3s ease" }}

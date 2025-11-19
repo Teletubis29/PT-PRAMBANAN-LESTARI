@@ -11,7 +11,7 @@ export default function PackageServices() {
       id: 1,
       title: "PAKET A1",
       subtitle: "Rumah tinggal",
-      type: "3 Pilihan Paket",
+      type: "2 Pilihan Paket",
     },
     {
       id: 2,
@@ -223,21 +223,35 @@ export default function PackageServices() {
                 </>
               )}
 
-              {selectedPackage.notes && (
-                <div className="mt-6 p-4 bg-gray-100 border border-gray-200 rounded-lg">
-                  <h4 className="text-lg font-bold text-gray-800 mb-2">
-                    Catatan
-                  </h4>
-                  <p className="text-sm text-gray-700 mb-3">
-                    Penawaran harga tersebut tidak termasuk:
-                  </p>
-                  <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
-                    {selectedPackage.notes.map((note, index) => (
-                      <li key={index}>{note}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+                {selectedPackage.notes && (
+                  <div className="mt-6 p-4 bg-gray-100 border border-gray-200 rounded-lg">
+                    <h4 className="text-lg font-bold text-gray-800 mb-2">
+                      Catatan
+                    </h4>
+                    <p className="text-sm text-gray-700 mb-3">
+                      Penawaran harga tersebut tidak termasuk:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+                      {selectedPackage.notes.map((note, index) => (
+                        <li key={index}>{note}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {selectedPackage.additionalInfo && (
+                  <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <h4 className="text-lg font-bold text-yellow-800 mb-2">
+                      Informasi Tambahan
+                    </h4>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-yellow-800">
+                      {selectedPackage.additionalInfo.map((info, index) => (
+                        <li key={index}>{info}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
             </div>
 
             {/* Modal Footer - Fixed */}
